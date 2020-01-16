@@ -907,7 +907,7 @@ h3 {
 
 /* line 20, ../../Arafath/CL/December/234. Finance/HTML/scss/_header.scss */
 .header-area .main-header-area.details_nav_bg {
-  background: #727272;
+  background: #0846a8;
   padding-bottom: 0;
 }
 
@@ -1235,7 +1235,7 @@ h3 {
   transition: transform 500ms ease, background 500ms ease;
   -webkit-transition: transform 500ms ease, background 500ms ease;
   box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.1);
-  background: rgba(0, 29, 56, 0.8);
+  background: #0846a8;
 }
 
 @media (max-width: 767px) {

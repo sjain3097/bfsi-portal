@@ -1,0 +1,1 @@
+export const UI_COMPONENTS = 'UI_COMPONENTS';

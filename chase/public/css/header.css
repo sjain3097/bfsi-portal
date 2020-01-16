@@ -1,0 +1,50 @@
+.title-text {
+  font-family: 'Meera Inimai', sans-serif;
+  text-align: center;
+  line-height: 2em;
+  color: #fff;
+  box-sizing: border-box;
+  position: relative;
+  font-size: 32px;
+  overflow: hidden;
+  width: auto;
+  margin-left: 40%;
+  font-weight: bold;
+}
+.logo {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  color: #fff;
+  box-sizing: border-box;
+  position: relative;
+  font-size: 2em;
+  display: inline-block;
+  overflow: hidden;
+  max-width: 2.7%;
+  margin-bottom: 18px;
+}
+
+.header {
+  background: #0846a8;
+  opacity: 0.9;
+}
+.sign-in-btn-container {
+  position: relative;
+  line-height: 70.4px;
+}
+.sign-in-btn {
+  float: right;
+}
+
+.track-link {
+  font-size: 1.9em;
+  /* float: right; */
+  position: relative;
+  margin-left: 22%;
+  color: #fff;
+  margin-top: 10px;
+}
+.track-link:hover {
+  color: #fff;
+  text-decoration: none;
+}
