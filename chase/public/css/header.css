@@ -1,15 +1,16 @@
 .title-text {
   font-family: 'Meera Inimai', sans-serif;
+  font-weight: bold;
   text-align: center;
   line-height: 2em;
-  color: #fff;
+  opacity: 0.9;
+  color: rgba(255, 255, 255);
   box-sizing: border-box;
   position: relative;
   font-size: 32px;
   overflow: hidden;
   width: auto;
   margin-left: 40%;
-  font-weight: bold;
 }
 .logo {
   font-family: 'Open Sans', sans-serif;
@@ -26,7 +27,7 @@
 
 .header {
   background: #0846a8;
-  opacity: 0.9;
+  /* opacity: 0.5; */
 }
 .sign-in-btn-container {
   position: relative;
@@ -47,4 +48,46 @@
 .track-link:hover {
   color: #fff;
   text-decoration: none;
+}
+.chase-text {
+  display: inline-block;
+  overflow: hidden;
+}
+.title-text.hiding {
+  margin-right: -0.313em;
+  opacity: 0.9;
+}
+.chase-text:before {
+  height: 2.188em;
+  line-height: 2.188em;
+}
+.black-linear {
+  background: rgb(17, 11, 120);
+  background: radial-gradient(
+    circle,
+    rgba(17, 11, 120, 1) 0%,
+    rgba(14, 14, 55, 1) 35%
+  );
+}
+.backgroung-img {
+  background-image: url('../header-back.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #cccccc;
+  height: 384px;
+}
+/* small phones resolution (0-480px)*/
+@media only screen and (max-width: 480px) {
+}
+
+/* small phone to other tablets (481-767px)*/
+@media only screen and (max-width: 767px) {
+}
+
+/* small tablet to big tablet (768-1023px) */
+@media only screen and (max-width: 1023px) {
+}
+
+/* Big tablet to big laptops */
+@media only screen and (max-width: 1200px) {
 }

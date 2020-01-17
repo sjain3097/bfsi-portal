@@ -1,1 +1,2 @@
-export const UI_COMPONENTS = 'UI_COMPONENTS';
+export const CLOSE_SIDEBAR = 'CLOSE_SIDEBAR';
+export const OPEN_SIDEBAR = 'OPEN_SIDEBAR';
