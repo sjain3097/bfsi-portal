@@ -903,6 +903,7 @@ h3 {
   background: #fff;
   background: transparent;
   padding: 0px 150px;
+  display: flex;
 }
 
 /* line 20, ../../Arafath/CL/December/234. Finance/HTML/scss/_header.scss */

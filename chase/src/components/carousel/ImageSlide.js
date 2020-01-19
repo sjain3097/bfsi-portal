@@ -7,9 +7,10 @@ const ImageSlide = ({ url }) => {
   };
 
   return (
-    <div>
+    <span className='img-size'>
       <img className='image-slide' src={url} style={styles} />
-    </div>
+      {/* <span>{url}</span> */}
+    </span>
   );
 };
 export default ImageSlide;

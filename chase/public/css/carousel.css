@@ -1,15 +1,20 @@
+.carousel {
+  display: flex;
+}
 .image-slide {
+  margin-left: 30%;
   height: 100%;
-  width: 100%;
-  transition: background-image 0.3s ease-in-out;
+  width: 30%;
+  /* transition: background-image 0.3s ease-in-out; */
 }
 
 .slide-arrow {
-  color: $theme-blue;
   cursor: pointer;
-  font-size: 2rem;
-  position: fixed;
+  font-size: 50px;
+  /* position: absolute; */
   top: 50%;
+  left: 50%;
+  color: #717171;
 }
 
 .slide-arrow.right {
@@ -18,4 +23,10 @@
 
 .slide-arrow.left {
   left: 1rem;
+}
+
+.img-size {
+  font-size: 48px;
+  height: 48px;
+  width: 126px;
 }
