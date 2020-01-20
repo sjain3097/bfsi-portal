@@ -97,6 +97,7 @@ class Header extends Component {
                   </div>
                   <div
                     className='col-6 col-sm-6 col-md-6'
+                    className='d_block'
                     style={{
                       'margin-left': 'auto',
                       'margin-right': '0px',
@@ -148,23 +149,57 @@ class Header extends Component {
               {/* RIGHT */}
               <div
                 className='col-4 col-sm-4 col-md-4'
-                style={{ 'background-color': 'blue', 'text-align': 'center' }}
+                style={{
+                  // 'background-color': 'blue',
+                  'text-align': 'center'
+                }}
               >
                 <div className='row'>
                   <div
-                    className='col-4 col-sm-4 col-md-4'
-                    style={{
-                      'background-color': 'orange',
-                      'margin-left': '33%'
-                    }}
+                    className=' col-md-5 d_block'
+                    style={
+                      {
+                        // 'background-color': 'orange'
+                        // 'margin-left': '33%'
+                      }
+                    }
                   >
-                    r1
+                    <a className='track__link' href=''>
+                      ATM & branch
+                    </a>
                   </div>
                   <div
-                    className='col -4 col-sm-4 col-md-4'
-                    style={{ 'background-color': 'orange' }}
+                    className=' col-md-3 d_block'
+                    style={
+                      {
+                        // 'background-color': 'orange'
+                        // 'margin-left': '33%'
+                      }
+                    }
                   >
-                    r2
+                    <a className='track__link' href=''>
+                      Español
+                    </a>
+                  </div>
+                  <div
+                    className=' col-md-3point shift_right'
+                    // style={{ 'background-color': 'orange' }}
+                  >
+                    <a className='button' href='signIn.html'>
+                      Sign in
+                    </a>
+                  </div>
+                  <div
+                    className='col-md-1'
+                    // style={{ 'background-color': 'green' }}
+                  >
+                    <a href=''>
+                      <i
+                        className='fa fa-search fa-lg'
+                        aria-hidden='true'
+                        style={{ color: 'white' }}
+                      ></i>
+                    </a>
                   </div>
                 </div>
               </div>
