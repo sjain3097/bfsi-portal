@@ -1,5 +1,5 @@
 .title-text {
-  font-family: "Meera Inimai", sans-serif;
+  font-family: 'Meera Inimai', sans-serif;
   font-weight: bold;
   text-align: center;
   line-height: 2em;
@@ -13,7 +13,7 @@
   margin-left: 40%;
 }
 .logo {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   text-align: center;
   color: #fff;
   box-sizing: border-box;
@@ -75,7 +75,7 @@
   );
 }
 .backgroung-img {
-  background-image: url("../header-back.jpg");
+  background-image: url('../header-back.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #cccccc;
