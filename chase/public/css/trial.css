@@ -1,98 +1,25 @@
-.title-text {
-  font-family: 'Meera Inimai', sans-serif;
-  font-weight: bold;
-  text-align: center;
-  line-height: 2em;
-  opacity: 0.9;
-  color: rgba(255, 255, 255);
-  box-sizing: border-box;
-  position: relative;
-  font-size: 32px;
-  overflow: hidden;
-  width: auto;
-  margin-left: 40%;
-}
-.logo {
-  font-family: 'Open Sans', sans-serif;
-  text-align: center;
-  color: #fff;
-  box-sizing: border-box;
-  position: relative;
-  font-size: 2em;
-  display: inline-block;
-  overflow: hidden;
-  max-width: 10%;
-  margin-top: 10px;
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  -webkit-transition: width 12s, height 6s;
+  transition: width 12s, height 6s;
 }
 
-.header {
-  background: rgb(8, 70, 168, 0.1);
-  display: flex;
-}
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-.sign-in-btn-container {
-  position: relative;
-  line-height: 70.4px;
-}
-.sign-in-btn {
-  float: right;
+.box:hover {
+  width: 300px;
+  height: 300px;
 }
 
-.track-link {
-  font-size: 18px;
-  /* float: right; */
-  position: relative;
-  margin-left: 10%;
-  color: #fff;
-  margin-top: 10px;
+.transform__box {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  transition: width 2s, height 2s, background-color 2s, transform 2s;
 }
-.track-link:hover {
-  color: #fff;
-  text-decoration: none;
-}
-.chase-text {
-  display: inline-block;
-  overflow: hidden;
-}
-.title-text.hiding {
-  margin-right: -0.313em;
-  opacity: 0.9;
-}
-.chase-text:before {
-  height: 2.188em;
-  line-height: 2.188em;
-}
-.black-linear {
-  background: rgb(17, 11, 120);
-  background: radial-gradient(
-    circle,
-    rgba(17, 11, 120, 1) 0%,
-    rgba(14, 14, 55, 1) 35%
-  );
-}
-.backgroung-img {
-  background-image: url('../header-back.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #cccccc;
-  height: 384px;
-}
-/* small phones resolution (0-480px)*/
-@media only screen and (max-width: 480px) {
-}
-
-/* small phone to other tablets (481-767px)*/
-@media only screen and (max-width: 767px) {
-}
-
-/* small tablet to big tablet (768-1023px) */
-@media only screen and (max-width: 1023px) {
-}
-
-/* Big tablet to big laptops */
-@media only screen and (max-width: 1200px) {
+.transform__box:hover {
+  width: 300px;
+  height: 300px;
+  background-color: black;
+  transform: rotate(180deg);
 }

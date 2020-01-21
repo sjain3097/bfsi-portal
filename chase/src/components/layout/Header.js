@@ -72,9 +72,12 @@ class Header extends Component {
       //     </div>
       //   </header>
       // </div>
-      <div className='backgroung-img '>
+      <div className='backgroung-img'>
         <header className='header'>
-          <div className='container-fluid'>
+          <div
+            className='container-fluid'
+            style={{ 'background-color': this.props.color }}
+          >
             <div className='row'>
               {/* LEFT */}
               <div

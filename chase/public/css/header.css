@@ -1,7 +1,10 @@
 @import url(//db.onlinewebfonts.com/c/f244fa690c2b20c4ad75856431e56ef0?family=Zekton);
 
 .container-fluid {
-  max-width: 95%;
+  margin-left: 20%;
+  max-width: 100%;
+  text-align: center;
+  position: fixed;
 }
 .backgroung-img {
   background-image: url('../header-back.jpg');
@@ -20,7 +23,7 @@
   text-decoration: none;
 }
 .header {
-  background-image: rgba(0, 0, 0, 0.7);
+  background-image: rgba(0, 0, 0, 0.075);
   line-height: 4.4em;
 }
 .title-text {
