@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
 import Sidebar from './components/layout/Sidebar';
 import Carousel from './components/carousel/Carousel';
-import Trial from './components/transitions/trial';
+// import Trial from './components/transitions/trial';
 class App extends Component {
   state = { headerColor: 'rgba(0, 0, 0, 0.07)' };
   listenScrollEvent = e => {

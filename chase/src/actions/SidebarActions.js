@@ -2,7 +2,7 @@ import { OPEN_SIDEBAR, CLOSE_SIDEBAR } from './types';
 export const openNav = () => dispatch => {
   return dispatch({
     type: OPEN_SIDEBAR,
-    sidebarWidth: '45%'
+    sidebarWidth: '35%'
   });
 };
 
