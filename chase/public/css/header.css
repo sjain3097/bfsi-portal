@@ -69,7 +69,12 @@ header {
 .d_block_drop_down {
   display: none;
 }
-
+.drop_down_block {
+  color: white;
+  font-size: 16px;
+  line-height: 2em;
+  padding: 10px 8px 0 8px;
+}
 @media (max-width: 768px) {
   .d_block {
     display: none;

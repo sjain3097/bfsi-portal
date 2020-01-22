@@ -3,6 +3,7 @@ import Sidebar from './Sidebar';
 import { connect } from 'react-redux';
 import { openNav } from '../../actions/SidebarActions';
 import PropTypes from 'prop-types';
+import { ReactComponent as MoneyCheck } from '../../money-check.svg';
 class Header extends Component {
   state = {
     headerDropDown: 'd_block_drop_down'
@@ -162,7 +163,7 @@ class Header extends Component {
             </div>
             <div
               className='container-fluid'
-              className={this.state.headerDropDown}
+              //className={this.state.headerDropDown}
               onMouseOver={this.showHeaderDropDown}
               onMouseOut={this.hideHeaderDropDown}
               style={{
@@ -175,12 +176,42 @@ class Header extends Component {
               <div
                 className='row'
                 style={{
-                  'background-color': 'orange',
+                  // 'background-color': 'orange',
                   width: '1168px',
                   height: '108.878px',
                   margin: '0px 0px 20px 110px'
                 }}
-              ></div>
+              >
+                <span className=' col-md-2 drop_down_block'>
+                  <a className='track__link'>
+                    <i class='fa fa-credit-card fa-2x' aria-hidden='true'></i>
+                    <br />
+                    Credit card
+                  </a>
+                </span>
+                <span className=' col-md-1 drop_down_block'>
+                  <a className='track__link'>
+                    <MoneyCheck style={{ transform: 'scale(0.6)' }} />
+                    <p
+                      style={{ 'line-height': '1.2em' }}
+                      className='track__link'
+                    >
+                      Checking Accounts
+                    </p>
+                  </a>
+                </span>
+                <span className=' col-md-1 drop_down_block'>
+                  <a className='track__link'>
+                    <MoneyCheck style={{ transform: 'scale(0.6)' }} />
+                    <p
+                      style={{ 'line-height': '1.2em' }}
+                      className='track__link'
+                    >
+                      Checking Accounts
+                    </p>
+                  </a>
+                </span>
+              </div>
             </div>
           </div>
         </header>
