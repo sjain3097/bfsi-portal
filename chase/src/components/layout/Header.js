@@ -33,6 +33,7 @@ class Header extends Component {
 						style={{
 							'background-color': this.props.color,
 							transition: 'background-color 1s ease-out',
+							zIndex: 3,
 						}}
 					>
 						<div className='row'>
@@ -63,6 +64,7 @@ class Header extends Component {
 										style={{
 											'margin-left': 'auto',
 											'margin-right': '33%',
+											transition: 'all 0s ease 0s',
 										}}
 									>
 										<a id='track_link' className='track__link d_block' href=''>
@@ -177,7 +179,7 @@ class Header extends Component {
 							style={{
 								'max-width': '100%',
 								height: '200px',
-								'background-color': this.props.color,
+								//'background-color': this.props.color,
 								transition: 'background-color 1s ',
 								left: 0,
 							}}
@@ -210,6 +212,77 @@ class Header extends Component {
 						</div>
 					</div>
 				</header>
+				<div style={{ height: '90px' }}></div>
+				<div
+					style={{
+						//'background-color': 'red',
+						width: '780px',
+						height: '232.727px',
+						margin: '0 0 15px 50px',
+						padding: '0 8px 0 8px',
+						display: 'flex',
+						right: '420px',
+						bottom: '62.2727px',
+						top: '90px',
+					}}
+				>
+					<img src='200.png' />
+					<div
+						className='container '
+						style={{
+							//'background-color': 'green',
+							height: '232px',
+							width: '350px',
+							display: 'flex',
+							'line-height': '18px',
+						}}
+					>
+						<div
+							className='row'
+							style={{
+								left: '20px',
+								position: 'relative',
+								zIndex: 0,
+							}}
+						>
+							<p
+								className='col '
+								style={{
+									'font-size': '36px',
+									'font-weight': '600',
+									color: 'white',
+									'line-height': '41.4px',
+									margin: '0 0 18px 0',
+									height: '81px',
+									// width: '350px',
+								}}
+							>
+								New Chase customers:
+							</p>
+							<div class='w-100' style={{ height: '0px' }}></div>
+							<p
+								className='col '
+								style={{
+									'font-size': '18px',
+									color: 'white',
+									'line-height': '23.4px',
+									margin: '0 0 18px 0',
+									height: '68px',
+									width: '350px',
+								}}
+							>
+								Open a Chase Total Checking® and Chase Savings℠ account with
+								qualifying activities.
+							</p>
+							<div class='w-100' style={{ height: '0px' }}></div>
+							<p className='col'>
+								<a className='open_acc_button' href='#'>
+									Open an account{' '}
+								</a>
+							</p>
+						</div>
+					</div>
+				</div>
 			</div>
 		);
 	}
