@@ -3,223 +3,221 @@ import Sidebar from './Sidebar';
 import { connect } from 'react-redux';
 import { openNav } from '../../actions/SidebarActions';
 import PropTypes from 'prop-types';
-import { ReactComponent as MoneyCheck } from '../../money-check.svg';
+import { ReactComponent as MoneyCheck } from '../../svgs/money-check.svg';
+import { ReactComponent as PiggyBank } from '../../svgs/piggy-bank.svg';
+import { ReactComponent as Car } from '../../svgs/car-side.svg';
+import { ReactComponent as Wallet } from '../../svgs/wallet.svg';
+import { ReactComponent as Home } from '../../svgs/home.svg';
+import { ReactComponent as Briefcase } from '../../svgs/briefcase.svg';
+import { ReactComponent as City } from '../../svgs/city.svg';
+import { ReactComponent as More } from '../../svgs/more.svg';
+import { ReactComponent as CreditCard } from '../../svgs/credit-card.svg';
+import HeaderDropDown from './HeaderDropDown';
 class Header extends Component {
-  state = {
-    headerDropDown: 'd_block_drop_down'
-  };
+	state = {
+		headerDropDown: 'd_block_drop_down',
+	};
 
-  hideHeaderDropDown = e => {
-    this.setState({ headerDropDown: 'd_block_drop_down' });
-  };
-  showHeaderDropDown = e => {
-    this.setState({ headerDropDown: '' });
-  };
-  render() {
-    return (
-      <div className='backgroung-img'>
-        <header className='header'>
-          <div
-            className='container-fluid'
-            style={{
-              'background-color': this.props.color,
-              transition: 'background-color 1s ease-out'
-            }}
-          >
-            <div className='row'>
-              {/* LEFT */}
-              <div
-                className='col-4 col-sm-4 col-md-4'
-                // style={{ 'background-color': 'orange' }}
-              >
-                <div className='row'>
-                  <div
-                    className='col-2 col-sm-2 col-md-4'
-                    // style={{ 'background-color': 'green' }}
-                  >
-                    <a className='btn'>
-                      <i
-                        className='fa fa-bars fa-2x '
-                        aria-hidden='true'
-                        onClick={this.props.openNav}
-                        style={{ color: 'white' }}
-                      ></i>
-                    </a>
-                  </div>
-                  <div
-                    className='col-6 col-sm-6 col-md-6'
-                    onMouseOver={this.showHeaderDropDown}
-                    onMouseOut={this.hideHeaderDropDown}
-                    className='dropdown-title'
-                    style={{
-                      'margin-left': 'auto',
-                      'margin-right': '0px',
-                      'margin-right': '33%'
-                    }}
-                  >
-                    <a id='track_link' className='track__link d_block' href=''>
-                      Open an account<i class='fa fa-chevron-down'></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
+	hideHeaderDropDown = e => {
+		this.setState({ headerDropDown: 'd_block_drop_down' });
+	};
+	showHeaderDropDown = e => {
+		this.setState({ headerDropDown: '' });
+	};
+	render() {
+		return (
+			<div className='backgroung-img'>
+				<header className='header'>
+					<div
+						className='container-fluid'
+						style={{
+							'background-color': this.props.color,
+							transition: 'background-color 1s ease-out',
+						}}
+					>
+						<div className='row'>
+							{/* LEFT */}
+							<div
+								className='col-4 col-sm-4 col-md-4'
+								// style={{ 'background-color': 'orange' }}
+							>
+								<div className='row'>
+									<div
+										className='col-2 col-sm-2 col-md-4'
+										// style={{ 'background-color': 'green' }}
+									>
+										<a className='btn'>
+											<i
+												className='fa fa-bars fa-2x '
+												aria-hidden='true'
+												onClick={this.props.openNav}
+												style={{ color: 'white' }}
+											></i>
+										</a>
+									</div>
+									<div
+										className='col-6 col-sm-6 col-md-6'
+										onMouseOver={this.showHeaderDropDown}
+										onMouseOut={this.hideHeaderDropDown}
+										className='dropdown-title'
+										style={{
+											'margin-left': 'auto',
+											'margin-right': '33%',
+										}}
+									>
+										<a id='track_link' className='track__link d_block' href=''>
+											Open an account<i class='fa fa-chevron-down'></i>
+										</a>
+									</div>
+								</div>
+							</div>
 
-              {/* CENTER */}
-              <div
-                className='col-4 col-sm-4 col-md-4'
-                // style={{ 'background-color': 'green' }}
-              >
-                <div className='row'>
-                  <div
-                    className='col-6 col-sm-6 col-md-6'
-                    style={{
-                      // 'background-color': 'orange',
-                      'margin-left': 'auto',
-                      'text-align': 'right',
-                      padding: '0 4px 0 0'
-                    }}
-                  >
-                    {/* <span className='title-text'>CHASE</span> */}
-                    <span>
-                      <img className='chase_text' src='chase_text_white.png' />
-                    </span>
-                  </div>
-                  <div
-                    className='col-2 col-sm-2 col-md-2'
-                    style={{
-                      // 'background-color': 'red',
-                      'margin-right': 'auto',
-                      'text-align': 'left',
-                      padding: '0 0 0 4px'
-                    }}
-                  >
-                    <span>
-                      <a href='index.html'>
-                        <img className='logo' src='hexa_white.png' />
-                      </a>
-                    </span>
-                  </div>
-                </div>
-              </div>
+							{/* CENTER */}
+							<div
+								className='col-4 col-sm-4 col-md-4'
+								// style={{ 'background-color': 'green' }}
+							>
+								<div className='row'>
+									<div
+										className='col-6 col-sm-6 col-md-6'
+										style={{
+											// 'background-color': 'orange',
+											'margin-left': 'auto',
+											'text-align': 'right',
+											padding: '0 4px 0 0',
+										}}
+									>
+										{/* <span className='title-text'>CHASE</span> */}
+										<span>
+											<img className='chase_text' src='chase_text_white.png' />
+										</span>
+									</div>
+									<div
+										className='col-2 col-sm-2 col-md-2'
+										style={{
+											// 'background-color': 'red',
+											'margin-right': 'auto',
+											'text-align': 'left',
+											padding: '0 0 0 4px',
+										}}
+									>
+										<span>
+											<a href='index.html'>
+												<img className='logo' src='hexa_white.png' />
+											</a>
+										</span>
+									</div>
+								</div>
+							</div>
 
-              {/* RIGHT */}
-              <div
-                className='col-4 col-sm-4 col-md-4'
-                style={{
-                  // 'background-color': 'blue',
-                  'text-align': 'center'
-                }}
-              >
-                <div className='row'>
-                  <div
-                    className=' col-md-5 '
-                    className='d_block'
-                    style={
-                      {
-                        // 'background-color': 'orange'
-                        //'margin-left': '33%'
-                      }
-                    }
-                  >
-                    <a className='track__link' href=''>
-                      ATM & branch
-                    </a>
-                  </div>
-                  <div
-                    className=' col-md-3 d_block'
-                    style={
-                      {
-                        // 'background-color': 'orange'
-                        // 'margin-left': '33%'
-                      }
-                    }
-                  >
-                    <a className='track__link' href=''>
-                      Español
-                    </a>
-                  </div>
-                  <div
-                    className=' col-md-3point shift_right'
-                    // style={{ 'background-color': 'orange' }}
-                  >
-                    <a className='button' href='signIn.html'>
-                      Sign in
-                    </a>
-                  </div>
-                  <div
-                    className='col-md-1'
-                    // style={{ 'background-color': 'red' }}
-                  >
-                    <a href=''>
-                      <i
-                        className='fa fa-search fa-lg'
-                        aria-hidden='true'
-                        style={{ color: 'white' }}
-                      ></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className='container-fluid'
-              //className={this.state.headerDropDown}
-              onMouseOver={this.showHeaderDropDown}
-              onMouseOut={this.hideHeaderDropDown}
-              style={{
-                'max-width': '100%',
-                'background-color': this.props.color,
-                transition: 'background-color 1s ease-out',
-                left: 0
-              }}
-            >
-              <div
-                className='row'
-                style={{
-                  // 'background-color': 'orange',
-                  width: '1168px',
-                  height: '108.878px',
-                  margin: '0px 0px 20px 110px'
-                }}
-              >
-                <span className=' col-md-2 drop_down_block'>
-                  <a className='track__link'>
-                    <i class='fa fa-credit-card fa-2x' aria-hidden='true'></i>
-                    <br />
-                    Credit card
-                  </a>
-                </span>
-                <span className=' col-md-1 drop_down_block'>
-                  <a className='track__link'>
-                    <MoneyCheck style={{ transform: 'scale(0.6)' }} />
-                    <p
-                      style={{ 'line-height': '1.2em' }}
-                      className='track__link'
-                    >
-                      Checking Accounts
-                    </p>
-                  </a>
-                </span>
-                <span className=' col-md-1 drop_down_block'>
-                  <a className='track__link'>
-                    <MoneyCheck style={{ transform: 'scale(0.6)' }} />
-                    <p
-                      style={{ 'line-height': '1.2em' }}
-                      className='track__link'
-                    >
-                      Checking Accounts
-                    </p>
-                  </a>
-                </span>
-              </div>
-            </div>
-          </div>
-        </header>
-      </div>
-    );
-  }
+							{/* RIGHT */}
+							<div
+								className='col-4 col-sm-4 col-md-4'
+								style={{
+									// 'background-color': 'blue',
+									'text-align': 'center',
+								}}
+							>
+								<div className='row'>
+									<div
+										className=' col-md-5 '
+										className='d_block'
+										style={
+											{
+												// 'background-color': 'orange'
+												//'margin-left': '33%'
+											}
+										}
+									>
+										<a className='track__link' href=''>
+											ATM & branch
+										</a>
+									</div>
+									<div
+										className=' col-md-3 d_block'
+										style={
+											{
+												// 'background-color': 'orange'
+												// 'margin-left': '33%'
+											}
+										}
+									>
+										<a className='track__link' href=''>
+											Español
+										</a>
+									</div>
+									<div
+										className=' col-md-3point shift_right'
+										// style={{ 'background-color': 'orange' }}
+									>
+										<a className='button' href='signIn.html'>
+											Sign in
+										</a>
+									</div>
+									<div
+										className='col-md-1'
+										// style={{ 'background-color': 'red' }}
+									>
+										<a href=''>
+											<i
+												className='fa fa-search fa-lg'
+												aria-hidden='true'
+												style={{ color: 'white' }}
+											></i>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div
+							className='container-fluid'
+							className={this.state.headerDropDown}
+							onMouseOver={this.showHeaderDropDown}
+							onMouseOut={this.hideHeaderDropDown}
+							style={{
+								'max-width': '100%',
+								height: '200px',
+								'background-color': this.props.color,
+								transition: 'background-color 1s ',
+								left: 0,
+							}}
+						>
+							<div
+								className='container'
+								style={{
+									display: 'grid',
+									'grid-template-columns': 'repeat(9, 1.2fr)',
+									//'background-color': 'green',
+									height: '150px',
+								}}
+							>
+								<HeaderDropDown subTitle='Credit Card' Icon={CreditCard} />
+								<HeaderDropDown
+									subTitle='Checking Accounts'
+									Icon={MoneyCheck}
+								/>
+								<HeaderDropDown subTitle='Savings Accounts' Icon={PiggyBank} />
+								<HeaderDropDown subTitle='CDs' Icon={Wallet} />
+								<HeaderDropDown subTitle='Car buying & Loans' Icon={Car} />
+								<HeaderDropDown subTitle='Mortage & Home Equity' Icon={Home} />
+								<HeaderDropDown
+									subTitle='Chase for Business'
+									Icon={Briefcase}
+								/>
+								<HeaderDropDown subTitle='Commercial Banking' Icon={City} />
+								<HeaderDropDown subTitle='See all' Icon={More} />
+							</div>
+						</div>
+					</div>
+				</header>
+			</div>
+		);
+	}
 }
 Header.propTypes = {
-  openNav: PropTypes.func.isRequired
+	openNav: PropTypes.func.isRequired,
 };
-export default connect(null, { openNav })(Header);
+export default connect(
+	null,
+	{ openNav },
+)(Header);
