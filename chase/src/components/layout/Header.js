@@ -214,7 +214,7 @@ class Header extends Component {
         <div style={{ height: "90px" }}></div>
         <div
           style={{
-            //'background-color': 'red',
+            //"background-color": "red",
             width: "780px",
             height: "232.727px",
             margin: "0 0 15px 50px",
@@ -229,7 +229,7 @@ class Header extends Component {
           <div
             className='container '
             style={{
-              //'background-color': 'green',
+              //"background-color": "green",
               height: "232px",
               width: "350px",
               display: "flex",
@@ -281,6 +281,28 @@ class Header extends Component {
               </p>
             </div>
           </div>
+        </div>
+        <div
+          className='container card col'
+          style={{
+            height: "182px",
+            width: "340px",
+            position: "relative",
+            left: "30%",
+            bottom: "55%"
+          }}
+        >
+          <span className='card-body' style={{ fontSize: "24px" }}>
+            Welcome
+          </span>
+          <div className='card-body'>
+            <a href='' className='sign_in'>
+              Sign in
+            </a>
+          </div>
+          <a className='card-body' style={{ fontSize: "14px" }} href='#'>
+            Not enrolled? Sign up now
+          </a>
         </div>
       </div>
     );
