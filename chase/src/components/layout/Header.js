@@ -1,39 +1,43 @@
-import React, { Component } from "react";
-import Sidebar from "./Sidebar";
-import { connect } from "react-redux";
-import { openNav } from "../../actions/SidebarActions";
-import PropTypes from "prop-types";
-import { ReactComponent as MoneyCheck } from "../../svgs/money-check.svg";
-import { ReactComponent as PiggyBank } from "../../svgs/piggy-bank.svg";
-import { ReactComponent as Car } from "../../svgs/car-side.svg";
-import { ReactComponent as Wallet } from "../../svgs/wallet.svg";
-import { ReactComponent as Home } from "../../svgs/home.svg";
-import { ReactComponent as Briefcase } from "../../svgs/briefcase.svg";
-import { ReactComponent as City } from "../../svgs/city.svg";
-import { ReactComponent as More } from "../../svgs/more.svg";
-import { ReactComponent as CreditCard } from "../../svgs/credit-card.svg";
-import HeaderDropDown from "./HeaderDropDown";
+import React, { Component } from 'react';
+import Sidebar from './Sidebar';
+import { connect } from 'react-redux';
+import { openNav } from '../../actions/SidebarActions';
+import PropTypes from 'prop-types';
+import { ReactComponent as MoneyCheck } from '../../svgs/money-check.svg';
+import { ReactComponent as PiggyBank } from '../../svgs/piggy-bank.svg';
+import { ReactComponent as Car } from '../../svgs/car-side.svg';
+import { ReactComponent as Wallet } from '../../svgs/wallet.svg';
+import { ReactComponent as Home } from '../../svgs/home.svg';
+import { ReactComponent as Briefcase } from '../../svgs/briefcase.svg';
+import { ReactComponent as City } from '../../svgs/city.svg';
+import { ReactComponent as More } from '../../svgs/more.svg';
+import { ReactComponent as CreditCard } from '../../svgs/credit-card.svg';
+import HeaderDropDown from './HeaderDropDown';
 class Header extends Component {
   state = {
-    headerDropDown: "d_block_drop_down"
+    headerDropDown: 'd_block_drop_down'
   };
 
   hideHeaderDropDown = e => {
-    this.setState({ headerDropDown: "d_block_drop_down" });
+    this.setState({ headerDropDown: 'd_block_drop_down' });
   };
   showHeaderDropDown = e => {
-    this.setState({ headerDropDown: "" });
+    this.setState({ headerDropDown: '' });
   };
   render() {
     return (
-      <div className='backgroung-img'>
+      <div
+        className='backgroung-img '
+        style={{ border: '2px solid yellow', width: '100%', height: '22%' }}
+      >
         <header className='header'>
           <div
             className='container-fluid'
             style={{
-              "background-color": this.props.color,
-              transition: "background-color 1s ease-out",
-              zIndex: 3
+              'background-color': this.props.color,
+              transition: 'background-color 1s ease-out',
+              zIndex: 3,
+              'max-width': '100%'
             }}
           >
             <div className='row'>
@@ -52,7 +56,7 @@ class Header extends Component {
                         className='fa fa-bars fa-2x '
                         aria-hidden='true'
                         onClick={this.props.openNav}
-                        style={{ color: "white" }}
+                        style={{ color: 'white' }}
                       ></i>
                     </a>
                   </div>
@@ -62,9 +66,9 @@ class Header extends Component {
                     onMouseOut={this.hideHeaderDropDown}
                     className='dropdown-title'
                     style={{
-                      "margin-left": "auto",
-                      "margin-right": "33%",
-                      transition: "all 0s ease 0s"
+                      'margin-left': 'auto',
+                      'margin-right': '33%',
+                      transition: 'all 0s ease 0s'
                     }}
                   >
                     <a id='track_link' className='track__link d_block' href=''>
@@ -84,9 +88,9 @@ class Header extends Component {
                     className='col-6 col-sm-6 col-md-6'
                     style={{
                       // 'background-color': 'orange',
-                      "margin-left": "auto",
-                      "text-align": "right",
-                      padding: "0 4px 0 0"
+                      'margin-left': 'auto',
+                      'text-align': 'right',
+                      padding: '0 4px 0 0'
                     }}
                   >
                     <span>
@@ -97,9 +101,9 @@ class Header extends Component {
                     className='col-2 col-sm-2 col-md-2'
                     style={{
                       // 'background-color': 'red',
-                      "margin-right": "auto",
-                      "text-align": "left",
-                      padding: "0 0 0 4px"
+                      'margin-right': 'auto',
+                      'text-align': 'left',
+                      padding: '0 0 0 4px'
                     }}
                   >
                     <span>
@@ -116,7 +120,7 @@ class Header extends Component {
                 className='col-4 col-sm-4 col-md-4'
                 style={{
                   // 'background-color': 'blue',
-                  "text-align": "center"
+                  'text-align': 'center'
                 }}
               >
                 <div className='row'>
@@ -163,7 +167,7 @@ class Header extends Component {
                       <i
                         className='fa fa-search fa-lg'
                         aria-hidden='true'
-                        style={{ color: "white" }}
+                        style={{ color: 'white' }}
                       ></i>
                     </a>
                   </div>
@@ -176,20 +180,20 @@ class Header extends Component {
               onMouseOver={this.showHeaderDropDown}
               onMouseOut={this.hideHeaderDropDown}
               style={{
-                "max-width": "100%",
-                height: "200px",
+                'max-width': '100%',
+                height: '200px',
                 //'background-color': this.props.color,
-                transition: "background-color 1s ",
+                transition: 'background-color 1s ',
                 left: 0
               }}
             >
               <div
                 className='container'
                 style={{
-                  display: "grid",
-                  "grid-template-columns": "repeat(9, 1.2fr)",
+                  display: 'grid',
+                  'grid-template-columns': 'repeat(9, 1.2fr)',
                   //'background-color': 'green',
-                  height: "150px"
+                  height: '150px'
                 }}
               >
                 <HeaderDropDown subTitle='Credit Card' Icon={CreditCard} />
@@ -211,18 +215,18 @@ class Header extends Component {
             </div>
           </div>
         </header>
-        <div style={{ height: "90px" }}></div>
+        <div style={{ height: '90px' }}></div>
         <div
           style={{
             //"background-color": "red",
-            width: "780px",
-            height: "232.727px",
-            margin: "0 0 15px 50px",
-            padding: "0 8px 0 8px",
-            display: "flex",
-            right: "420px",
-            bottom: "62.2727px",
-            top: "90px"
+            width: '780px',
+            height: '232.727px',
+            margin: '0 0 15px 50px',
+            padding: '0 8px 0 8px',
+            display: 'flex',
+            right: '420px',
+            bottom: '62.2727px',
+            top: '90px'
           }}
         >
           <img src='200.png' />
@@ -230,79 +234,102 @@ class Header extends Component {
             className='container '
             style={{
               //"background-color": "green",
-              height: "232px",
-              width: "350px",
-              display: "flex",
-              "line-height": "18px"
+              height: '232px',
+              width: '350px',
+              display: 'flex',
+              'line-height': '18px'
             }}
           >
             <div
               className='row'
               style={{
-                left: "20px",
-                position: "relative",
+                left: '20px',
+                position: 'relative',
                 zIndex: 0
               }}
             >
               <p
                 className='col '
                 style={{
-                  "font-size": "36px",
-                  "font-weight": "600",
-                  color: "white",
-                  "line-height": "41.4px",
-                  margin: "0 0 18px 0",
-                  height: "81px"
+                  'font-size': '36px',
+                  'font-weight': '600',
+                  color: 'white',
+                  'line-height': '41.4px',
+                  margin: '0 0 18px 0',
+                  height: '81px'
                   // width: '350px',
                 }}
               >
                 New Chase customers:
               </p>
-              <div class='w-100' style={{ height: "0px" }}></div>
+              <div class='w-100' style={{ height: '0px' }}></div>
               <p
                 className='col '
                 style={{
-                  "font-size": "18px",
-                  color: "white",
-                  "line-height": "23.4px",
-                  margin: "0 0 18px 0",
-                  height: "68px",
-                  width: "350px"
+                  'font-size': '18px',
+                  color: 'white',
+                  'line-height': '23.4px',
+                  margin: '0 0 18px 0',
+                  height: '68px',
+                  width: '350px'
                 }}
               >
                 Open a Chase Total Checking® and Chase Savings℠ account with
                 qualifying activities.
               </p>
-              <div class='w-100' style={{ height: "0px" }}></div>
+              <div class='w-100' style={{ height: '0px' }}></div>
               <p className='col'>
                 <a className='open_acc_button' href='#'>
-                  Open an account{" "}
+                  Open an account{' '}
                 </a>
               </p>
             </div>
           </div>
         </div>
         <div
-          className='container card col'
+          className='card-sign-in'
           style={{
-            height: "182px",
-            width: "340px",
-            position: "relative",
-            left: "30%",
-            bottom: "55%"
+            height: '182px',
+            width: '340px',
+            position: 'absolute',
+            left: '70%',
+            bottom: '65%',
+            overflow: 'hidden',
+            borderRadius: '5px'
           }}
         >
-          <span className='card-body' style={{ fontSize: "24px" }}>
+          <div
+            //className='card-body'
+            //className='card_block'
+            style={{
+              fontSize: '24px',
+              height: '30%',
+              'margin-left': '10%',
+              'margin-top': '5%'
+            }}
+          >
             Welcome
-          </span>
-          <div className='card-body'>
+          </div>
+          <div
+            //className='card-body'
+            style={{
+              'margin-top': '5%',
+              'margin-left': '10%'
+            }}
+          >
             <a href='' className='sign_in'>
               Sign in
             </a>
           </div>
-          <a className='card-body' style={{ fontSize: "14px" }} href='#'>
-            Not enrolled? Sign up now
-          </a>
+          <div style={{ 'margin-top': '5%', 'margin-left': '10%' }}>
+            <a
+              //className='card-body'
+              style={{ fontSize: '14px', textDecoration: 'none' }}
+              href='#'
+            >
+              Not enrolled? Sign up now
+            </a>
+          </div>
         </div>
       </div>
     );

@@ -7,16 +7,17 @@
   position: fixed;
 }
 .backgroung-img {
-  background-image: url("../header-back.jpg");
+  background-image: url('../header-back.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #cccccc;
   height: 435px;
+  z-index: 2;
 }
 .track__link {
   color: #fff;
   font-size: 18px;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .track__link:hover {
@@ -85,7 +86,7 @@ header {
 .drop_down_link {
   color: #fff;
   font-size: 15px;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 .open_acc_button {
   font-size: 1em;
@@ -109,7 +110,7 @@ header {
   font-weight: 600;
   border-width: 1px 1px 1px 1px;
   text-decoration: none;
-  padding: 10px;
+  padding: 60px;
   background-color: #0b6efd;
   color: #fff;
   border-radius: 5px;
@@ -121,8 +122,12 @@ header {
   text-decoration: none;
   background-color: #002db3c9;
 }
+.card-sign-in {
+  background-color: #fff;
+  width: 40%;
+}
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .d_block {
     display: none;
   }
