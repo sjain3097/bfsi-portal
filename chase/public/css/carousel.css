@@ -1,0 +1,32 @@
+.carousel {
+  display: flex;
+}
+.image-slide {
+  margin-left: 30%;
+  height: 100%;
+  width: 30%;
+  /* transition: background-image 0.3s ease-in-out; */
+}
+
+.slide-arrow {
+  cursor: pointer;
+  font-size: 50px;
+  /* position: absolute; */
+  top: 50%;
+  left: 50%;
+  color: #717171;
+}
+
+.slide-arrow.right {
+  right: 1rem;
+}
+
+.slide-arrow.left {
+  left: 1rem;
+}
+
+.img-size {
+  font-size: 48px;
+  height: 48px;
+  width: 126px;
+}
