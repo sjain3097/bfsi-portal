@@ -1,52 +1,29 @@
-@import url(//db.onlinewebfonts.com/c/f244fa690c2b20c4ad75856431e56ef0?family=Zekton);
-
-.container-fluid {
-  margin-left: 20%;
-  max-width: 100%;
-  text-align: center;
+.d-md-block {
+  display: none;
+}
+.header {
+  /* background-color: darkgray; */
   position: fixed;
-}
-.backgroung-img {
-  background-image: url('../header-back.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #cccccc;
-  height: 435px;
-  z-index: 2;
-}
-.track__link {
-  color: #fff;
+  line-height: 70px;
   font-size: 18px;
-  font-family: 'Open Sans', sans-serif;
-}
-
-.track__link:hover {
-  color: #fff;
-  text-decoration: none;
-}
-header {
-  background-image: rgba(0, 0, 0, 0.075);
-  line-height: 4.4em;
 }
 
 .chase_text {
   width: 60%;
-}
-.title-text {
-  text-align: right;
-  font-family: Zekton;
-  color: white;
-  font-weight: 900;
-  font-size: 30px;
-  text-decoration: none solid rgb(255, 255, 255);
-  box-sizing: border-box;
-  height: 73px;
-  width: 146px;
-  overflow: hidden;
+  margin-left: 57%;
 }
 .logo {
-  max-width: 50%;
-  padding-bottom: 5%;
+  width: 20%;
+}
+.column-ipad {
+  width: 20.33%;
+}
+.track_link {
+  color: white;
+}
+.track_link:hover {
+  text-decoration: none;
+  color: white;
 }
 .button {
   border-style: solid;
@@ -64,81 +41,97 @@ header {
   text-decoration: none;
   background-color: #002db3;
 }
-.col-md-3point {
-  width: 29 96667%;
-  padding: 0 15px 0 15px;
+
+/* header background */
+.backgroung-img {
+  background-image: url('../header-back.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #cccccc;
+  height: 435px;
+  z-index: 2;
 }
+
+/* header drop down */
 .d_block_drop_down {
   /* display: none; */
   max-height: 0px;
   overflow: hidden;
   transition: all 0.4s;
 }
-.drop_down_block {
-  color: white;
-  font-size: 16px;
-  line-height: 0em;
-  padding: 10px 8px 0 8px;
-  width: 128px;
-  height: 130px;
-  overflow: hidden;
+.icon_box {
+  text-align: center;
+  font-size: 200px;
 }
 .drop_down_link {
-  color: #fff;
-  font-size: 15px;
-  font-family: 'Open Sans', sans-serif;
-}
-.open_acc_button {
-  font-size: 1em;
+  text-align: center;
   text-decoration: none;
-  padding: 10px;
-  background-color: #0092ff;
+  font-family: inherit;
   color: #fff;
-  border-radius: 5px;
-  height: 18%;
-  width: 350px;
+  font-weight: 500;
 }
-.open_acc_button:hover {
-  color: #fff;
-  text-decoration: none;
-  background-color: #002db3c9;
+.drop_down_link:hover {
+  text-decoration: none !important;
+  color: white;
 }
 
-.sign_in {
-  border-style: solid;
-  font-size: 1em;
-  font-weight: 600;
-  border-width: 1px 1px 1px 1px;
-  text-decoration: none;
-  padding: 60px;
-  background-color: #0b6efd;
-  color: #fff;
-  border-radius: 5px;
-  margin: 20px 0 24px 0;
-  padding: 10px 100px 10px 110px;
-}
-.sign_in:hover {
-  color: #fff;
-  text-decoration: none;
-  background-color: #002db3c9;
-}
-.card-sign-in {
-  background-color: #fff;
-  width: 40%;
-}
-
-@media (max-width: 600px) {
-  .d_block {
+/* Ipad media queries */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .d-s-block {
     display: none;
   }
-  .shift_right {
-    margin-left: 40%;
-  }
-  .logo {
-    max-width: 100%;
-    padding-bottom: 7%;
+  .column-ipad {
+    width: 66.66%;
   }
   .chase_text {
-    width: 90%;
+    width: 100%;
+    margin-left: 33%;
+  }
+  .logo {
+    width: 30%;
+  }
+  .sign_in {
+    margin-left: 40%;
+  }
+}
+
+/* iphone-x media queries  */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .backgroung-img {
+    background-image: url('../header-back.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #cccccc;
+    height: 375px;
+    z-index: 2;
+  }
+  .d-xs-block {
+    display: none;
+  }
+  .column-ipad {
+    margin-left: 40%;
+    width: 60.66%;
+  }
+  .title {
+    margin-left: 25%;
+  }
+  .chase_text {
+    width: 130%;
+    margin-left: 15%;
+  }
+  .logo {
+    width: 120%;
+  }
+  .sign_in {
+    margin-right: 15%;
+  }
+  .button {
+    font-size: 16px;
+    border: none;
+    background-color: inherit;
+  }
+  .button:hover {
+    color: #fff;
+    text-decoration: none;
   }
 }
