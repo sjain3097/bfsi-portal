@@ -29,7 +29,8 @@ class HeaderDropDown extends Component {
           height: '200px',
           'background-color': this.props.headerColor,
           transition: 'background-color 1s ',
-          position: 'fixed'
+          position: 'fixed',
+          top: '70px'
         }}
       >
         <div

@@ -10,7 +10,7 @@ class HeaderBackground extends Component {
     return (
       <div className='backgroung-img '>
         <Header color={this.props.headerColor} />
-        <div style={{ height: '70px' }}></div>
+        {/* <div style={{ height: '70px' }}></div> */}
         <HeaderDropDown />
       </div>
     );
