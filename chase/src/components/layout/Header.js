@@ -71,7 +71,7 @@ class Header extends Component {
                   onMouseOut={this.props.hideHeaderDropDown}
                   // style={{ 'background-color': 'violet', height: '70px' }}
                 >
-                  <a id='track_link' className='track_link' href=''>
+                  <a className='track_link' href=''>
                     Open an account<i class='fa fa-chevron-down'></i>
                   </a>
                 </div>

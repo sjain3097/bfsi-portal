@@ -17,7 +17,6 @@ import {
 import { PropTypes } from 'prop-types';
 class HeaderDropDown extends Component {
   render() {
-    console.log(this.props.headerColor);
     return (
       <div
         className='container-fluid'
@@ -26,9 +25,9 @@ class HeaderDropDown extends Component {
         onMouseOut={this.props.hideHeaderDropDown}
         style={{
           width: '100%',
-          height: '200px',
+          //height: '200px',
           'background-color': this.props.headerColor,
-          transition: 'background-color 1s ',
+          //transition: 'background-color 1s ',
           position: 'fixed',
           top: '70px'
         }}

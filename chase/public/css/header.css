@@ -21,6 +21,14 @@
 .track_link {
   color: white;
 }
+/* header drop down */
+.d_block_drop_down {
+  display: none;
+  /* max-height: 0px;
+  overflow: hidden; */
+  transition: height 1s;
+}
+
 .track_link:hover {
   text-decoration: none;
   color: white;
@@ -41,24 +49,26 @@
   text-decoration: none;
   background-color: #002db3;
 }
-
+.header_inner {
+  width: 55%;
+  height: 60%;
+  margin: 0 0 0 3%;
+  padding: 0 8px 0 8px;
+  display: flex;
+  right: 420px;
+  bottom: 62.2727px;
+  top: 90px;
+}
 /* header background */
 .backgroung-img {
   background-image: url('../header-back.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #cccccc;
-  height: 440px;
+  height: 450px;
   z-index: 2;
 }
 
-/* header drop down */
-.d_block_drop_down {
-  /* display: none; */
-  max-height: 0px;
-  overflow: hidden;
-  transition: all 0.4s;
-}
 .icon_box {
   text-align: center;
   font-size: 200px;
@@ -74,7 +84,21 @@
   text-decoration: none !important;
   color: white;
 }
-
+.open_acc_button {
+  font-size: 1em;
+  text-decoration: none;
+  padding: 10px;
+  background-color: #0092ff;
+  color: #fff;
+  border-radius: 5px;
+  height: 18%;
+  width: 350px;
+}
+.open_acc_button:hover {
+  color: #fff;
+  text-decoration: none;
+  background-color: #002db3c9;
+}
 /* Ipad media queries */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .d-s-block {
@@ -93,6 +117,16 @@
   .sign_in {
     margin-left: 40%;
   }
+  .header_inner {
+    width: 75%;
+    height: 60%;
+    margin: 0 0 0 3%;
+    padding: 0 8px 0 8px;
+    display: flex;
+    right: 420px;
+    bottom: 62.2727px;
+    top: 90px;
+  }
 }
 
 /* iphone-x media queries  */
@@ -102,7 +136,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #cccccc;
-    height: 375px;
+    /* height: 375px; */
+    width: 620px;
     z-index: 2;
   }
   .d-xs-block {
@@ -117,10 +152,11 @@
   }
   .chase_text {
     width: 130%;
-    margin-left: 15%;
+    margin-left: 2%;
   }
   .logo {
     width: 120%;
+    margin-left: 4%;
   }
   .sign_in {
     margin-right: 15%;
@@ -133,5 +169,15 @@
   .button:hover {
     color: #fff;
     text-decoration: none;
+  }
+  .header_inner {
+    width: 90%;
+    height: 60%;
+    margin: 0 0 0 3%;
+    padding: 0 8px 0 8px;
+    display: flex;
+    right: 420px;
+    bottom: 62.2727px;
+    top: 90px;
   }
 }

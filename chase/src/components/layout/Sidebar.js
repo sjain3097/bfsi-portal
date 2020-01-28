@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { openNav, closeNav } from "../../actions/SidebarActions";
-import PropTypes from "prop-types";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { openNav, closeNav } from '../../actions/SidebarActions';
+import PropTypes from 'prop-types';
 class Sidebar extends Component {
   state = {
-    sidebarWidth: "0%"
+    sidebarWidth: '0%'
   };
   componentWillReceiveProps = nextProps => {
     if (nextProps.sidebarWidth) {
@@ -12,14 +12,13 @@ class Sidebar extends Component {
     }
   };
   render() {
-    console.log(this.props);
     return (
       <div>
         <div
           id='myNav'
           className='sidebar'
           style={{
-            "z-index": "4",
+            'z-index': '4',
             width: this.state.sidebarWidth
           }}
         >
@@ -56,7 +55,6 @@ Sidebar.propTypes = {
   sidebarWidth: PropTypes.string.isRequired
 };
 const mapStateToProps = state => {
-  console.log(state);
   return {
     sidebarWidth: state.sidebar.sidebarWidth
   };
