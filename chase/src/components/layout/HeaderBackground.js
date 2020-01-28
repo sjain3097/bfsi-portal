@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Header from './Header';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-
+import SignInCard from './SignInCard';
 import HeaderDropDown from './HeaderDropDown';
 
 class HeaderBackground extends Component {
@@ -34,6 +34,7 @@ class HeaderBackground extends Component {
             </div>
           </div>
         </div>
+        <SignInCard />
       </div>
     );
   }
