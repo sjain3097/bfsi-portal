@@ -1,17 +1,16 @@
 import React, { Component } from 'react';
 import ImageSlide from './ImageSlide';
 import Arrow from './Arrow';
+import { ReactComponent as MoneyCheck } from '../../svgs/money-check.svg';
+import { ReactComponent as PiggyBank } from '../../svgs/piggy-bank.svg';
+import { ReactComponent as Car } from '../../svgs/car-side.svg';
+import { ReactComponent as Home } from '../../svgs/home.svg';
+import { ReactComponent as Briefcase } from '../../svgs/briefcase.svg';
+import { ReactComponent as CreditCard } from '../../svgs/credit-card.svg';
+import { ReactComponent as Tachometer } from '../../svgs/tachometer.svg';
+import { ReactComponent as PrivateClient } from '../../svgs/private-clients.svg';
+import { ReactComponent as Invest } from '../../svgs/invest.svg';
 
-const imgUrls = [
-  'carousel-img/car.png',
-  'carousel-img/credit-card.png',
-  'carousel-img/home.png',
-  'carousel-img/piggy-bank.png',
-  'carousel-img/suitcase.png',
-  'carousel-img/tachometer.png',
-  'carousel-img/user.png',
-  'carousel-img/chart.png'
-];
 class Carousel extends Component {
   constructor(props) {
     super(props);
@@ -20,12 +19,23 @@ class Carousel extends Component {
       second: 1,
       third: 2,
       fourth: 3,
-      fifth: 4
+      fifth: 4,
+      imgUrls: [
+        { icon: Tachometer, subtitle: 'Free Credit Score' },
+        { icon: CreditCard, subtitle: 'Find a credit card' },
+        { icon: Home, subtitle: 'Home Lending' },
+        { icon: Car, subtitle: 'Car Buying & Loans' },
+        { icon: PiggyBank, subtitle: 'Savings Accounts & CDs' },
+        { icon: Briefcase, subtitle: 'Chase for Business' },
+        { icon: PrivateClient, subtitle: 'Chase Private Client' },
+        { icon: Invest, subtitle: 'Invest' },
+        { icon: MoneyCheck, subtitle: 'Schedule a meeting' }
+      ]
     };
   }
   //working
   previousSlide = () => {
-    const lastIndex = imgUrls.length - 1;
+    const lastIndex = this.state.imgUrls.length - 1;
     const { first, second, third, fourth, fifth } = this.state;
     const n_first = first === 0 ? lastIndex : first - 1;
     // console.log(n_first);
@@ -52,7 +62,7 @@ class Carousel extends Component {
   };
 
   nextSlide = () => {
-    const lastIndex = imgUrls.length - 1;
+    const lastIndex = this.state.imgUrls.length - 1;
     const { first, second, third, fourth, fifth } = this.state;
     const n_first = first === lastIndex ? 0 : first + 1;
     this.setState({
@@ -79,22 +89,92 @@ class Carousel extends Component {
 
   render() {
     return (
-      <div className='carousel'>
-        <Arrow
+      <div>
+        <div className='carousel__heading--container'>
+          <span className='carousel__heading'>Choose what's right for you</span>
+        </div>
+        <div
+          className='carousel_container'
+          //style={{ height: '148px', width: '100%', backgroundColor: 'yellow' }}
+        >
+          <div className='slide_arrow--left'>
+            <Arrow
+              direction='left'
+              clickFunction={this.previousSlide}
+              glyph={<i class='fa fa-angle-left'></i>}
+            />
+          </div>
+          <div
+            style={{
+              width: 'auto',
+              // height: 'inherit',
+              backgroundColor: 'blue'
+              // display: 'flex'
+            }}
+          >
+            <ImageSlide
+              Icon={this.state.imgUrls[this.state.first].icon}
+              subtitle={this.state.imgUrls[this.state.first].subtitle}
+            />
+            <ImageSlide
+              Icon={this.state.imgUrls[this.state.second].icon}
+              subtitle={this.state.imgUrls[this.state.second].subtitle}
+            />
+            <ImageSlide
+              Icon={this.state.imgUrls[this.state.third].icon}
+              subtitle={this.state.imgUrls[this.state.third].subtitle}
+            />
+            <ImageSlide
+              Icon={this.state.imgUrls[this.state.fourth].icon}
+              subtitle={this.state.imgUrls[this.state.fourth].subtitle}
+              hide='d-s-block'
+            />
+            <ImageSlide
+              Icon={this.state.imgUrls[this.state.fifth].icon}
+              subtitle={this.state.imgUrls[this.state.fifth].subtitle}
+              hide='d-s-block'
+            />
+          </div>
+          <div className='slide_arrow--right'>
+            <Arrow
+              direction='right'
+              clickFunction={this.nextSlide}
+              glyph={<i class='fa fa-angle-right'></i>}
+            />
+          </div>
+        </div>
+        {/* <Arrow
           direction='left'
           clickFunction={this.previousSlide}
           glyph={<i class='fa fa-angle-left'></i>}
         />
-        <ImageSlide url={imgUrls[this.state.first]} />
-        <ImageSlide url={imgUrls[this.state.second]} />
-        <ImageSlide url={imgUrls[this.state.third]} />
-        <ImageSlide url={imgUrls[this.state.fourth]} />
-        <ImageSlide url={imgUrls[this.state.fifth]} />
+        <ImageSlide
+          Icon={this.state.imgUrls[this.state.first].icon}
+          subtitle={this.state.imgUrls[this.state.first].subtitle}
+        />
+        <ImageSlide
+          Icon={this.state.imgUrls[this.state.second].icon}
+          subtitle={this.state.imgUrls[this.state.second].subtitle}
+        />
+        <ImageSlide
+          Icon={this.state.imgUrls[this.state.third].icon}
+          subtitle={this.state.imgUrls[this.state.third].subtitle}
+        />
+        <ImageSlide
+          Icon={this.state.imgUrls[this.state.fourth].icon}
+          subtitle={this.state.imgUrls[this.state.fourth].subtitle}
+          hide='d-s-block'
+        />
+        <ImageSlide
+          Icon={this.state.imgUrls[this.state.fifth].icon}
+          subtitle={this.state.imgUrls[this.state.fifth].subtitle}
+          hide='d-s-block'
+        />
         <Arrow
           direction='right'
           clickFunction={this.nextSlide}
           glyph={<i class='fa fa-angle-right'></i>}
-        />
+        /> */}
       </div>
     );
   }

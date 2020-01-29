@@ -42,20 +42,9 @@ class Header extends Component {
         >
           {/* left header block */}
           <div className='row'>
-            <div
-              className=' col-2 col-md-4'
-              // style={{
-              //    'background-color': 'green',
-              //   height: '70px',
-              //   border: '2px solid red'
-              // }}
-            >
+            <div className=' col-2 col-md-4'>
               <div className='row'>
-                <div
-                  className='col-6 col-md-4'
-                  //className='header-vertical-align'
-                  // style={{ 'background-color': 'yellow', height: '70px' }}
-                >
+                <div className='col-6 col-md-4'>
                   <a className='btn'>
                     <i
                       className='fa fa-bars fa-2x '
@@ -69,7 +58,6 @@ class Header extends Component {
                   className='col-md-8 d-s-block d-xs-block'
                   onMouseOver={this.props.showHeaderDropDown}
                   onMouseOut={this.props.hideHeaderDropDown}
-                  // style={{ 'background-color': 'violet', height: '70px' }}
                 >
                   <a className='track_link' href=''>
                     Open an account<i class='fa fa-chevron-down'></i>
@@ -79,28 +67,12 @@ class Header extends Component {
             </div>
 
             {/* CENTER HEADER BLOCK */}
-            <div
-              className='col-6 col-md-4'
-              // style={{
-              //   'background-color': 'blue',
-              //   height: '70px',
-              //   border: '2px solid red'
-              // }}
-            >
+            <div className='col-6 col-md-4'>
               <div className='row'>
-                <div
-                  className='col-6 col-md-6 title'
-                  // style={{
-                  //   'background-color': 'red',
-                  //   height: '70px'
-                  // }}
-                >
+                <div className='col-6 col-md-6 title'>
                   <img className='chase_text' src='chase_text_white.png' />
                 </div>
-                <div
-                  className='col-3 col-md-6'
-                  // style={{ 'background-color': 'violet', height: '70px' }}
-                >
+                <div className='col-3 col-md-6'>
                   <span>
                     <a href='index.html'>
                       <img className='logo' src='hexa_white.png' />
@@ -111,48 +83,24 @@ class Header extends Component {
             </div>
 
             {/* right header block */}
-            <div
-              className='col-4 col-md-4'
-              // style={{
-              //   'background-color': 'red',
-              //   height: '70px',
-              //   border: '2px solid red'
-              // }}
-            >
+            <div className='col-4 col-md-4'>
               <div className='row'>
-                <div
-                  className='col-md-4 d-s-block d-xs-block'
-                  //style={{ 'background-color': 'yellow', height: '70px' }}
-                >
+                <div className='col-md-4 d-s-block d-xs-block'>
                   <a className='track_link' href=''>
                     ATM & branch
                   </a>
                 </div>
-                <div
-                  className='col-md-3 d-s-block d-xs-block'
-                  // style={{ 'background-color': 'violet', height: '70px' }}
-                >
+                <div className='col-md-3 d-s-block d-xs-block'>
                   <a className='track_link' href=''>
                     Español
                   </a>
                 </div>
-                <div
-                  className='column-ipad'
-                  style={
-                    {
-                      //'margin-left': '0%', //in Iphone-x
-                      //'background-color': 'indigo'
-                    }
-                  }
-                >
+                <div className='column-ipad'>
                   <a className='sign_in button' href=''>
                     Sign in
                   </a>
                 </div>
-                <div
-                  className='col-md-2 d-xs-block'
-                  // style={{ 'background-color': 'blue', height: '70px' }}
-                >
+                <div className='col-md-2 d-xs-block'>
                   <a href=''>
                     <i
                       className='fa fa-search fa-lg'

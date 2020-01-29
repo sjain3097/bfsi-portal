@@ -6,6 +6,7 @@
   position: fixed;
   line-height: 70px;
   font-size: 18px;
+  z-index: 100;
 }
 
 .chase_text {
@@ -67,6 +68,7 @@
   background-size: cover;
   background-color: #cccccc;
   height: 450px;
+  width: 100%;
   z-index: 2;
 }
 
@@ -179,7 +181,7 @@
   }
   .chase_text {
     width: 100%;
-    margin-left: 33%;
+    margin-left: 29%;
   }
   .logo {
     width: 30%;
@@ -216,7 +218,7 @@
     background-size: cover;
     background-color: #cccccc;
     /* height: 375px; */
-    width: 660px;
+    width: 690px;
     z-index: 2;
   }
   .d-xs-block {

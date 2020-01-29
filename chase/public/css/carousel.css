@@ -1,17 +1,17 @@
-.carousel {
+/* .carousel {
   display: flex;
+  height: 10%;
+  color: white;
 }
 .image-slide {
   margin-left: 30%;
   height: 100%;
   width: 30%;
-  /* transition: background-image 0.3s ease-in-out; */
 }
 
 .slide-arrow {
   cursor: pointer;
   font-size: 50px;
-  /* position: absolute; */
   top: 50%;
   left: 50%;
   color: #717171;
@@ -23,10 +23,89 @@
 
 .slide-arrow.left {
   left: 1rem;
+} */
+.carousel {
+  display: flex;
+  line-height: 0%;
+}
+.carousel__heading {
+  font-size: 40px;
+  margin-left: 30%;
+  color: #414042;
+  font-weight: 300;
+}
+/* .slide-arrow {
+  cursor: pointer;
+  position: absolute;
+  font-size: 90px;
+  top: 50%;
+  left: 50%;
+  color: #717171;
+} */
+.slide_arrow--right {
+  height: 148px;
+  width: 120px;
+  /* background-color: blue; */
+  margin-left: 92%;
+  /* margin-top: -10.3%; */
+  font-size: 80px;
+  text-align: center;
+}
+.slide_arrow--left {
+  height: 148px;
+  width: 120px;
+  font-size: 80px;
+  text-align: center;
+
+  /* background-color: blue; */
+}
+.carousel_container {
+  height: 148px;
+  width: 100%;
+  display: flex;
+  color: #414042;
+  text-align: center;
+  background-color: yellow;
+}
+/* Ipad media queries */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .slide_arrow--right {
+    height: 148px;
+    width: 120px;
+    /* background-color: blue; */
+    margin-left: 84%;
+    margin-top: -19%;
+  }
 }
 
-.img-size {
-  font-size: 48px;
-  height: 48px;
-  width: 126px;
+/* iphone-x media queries  */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .carousel__heading--container {
+    height: 180px;
+    width: 660px;
+    margin-top: 10%;
+    text-align: center;
+  }
+  .carousel__heading {
+    margin-left: 5%;
+    height: 180px;
+    width: 600px;
+    font-size: 55px;
+    text-align: center;
+    font-weight: 300;
+    color: #414042;
+    line-height: 95%;
+  }
+  .carousel_container {
+    height: 148px;
+    width: 183%;
+    background-color: yellow;
+  }
+  .slide_arrow--right {
+    height: 148px;
+    width: 120px;
+    /* background-color: blue; */
+    margin-left: 83%;
+    /* margin-top: -21%; */
+  }
 }
