@@ -6,6 +6,7 @@
   position: fixed;
   line-height: 70px;
   font-size: 18px;
+  width: 99%;
   z-index: 100;
 }
 
@@ -63,7 +64,7 @@
 }
 /* header background */
 .backgroung-img {
-  background-image: url('../header-back.jpg');
+  background-image: url("../header-back.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #cccccc;
@@ -213,7 +214,7 @@
 /* iphone-x media queries  */
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) {
   .backgroung-img {
-    background-image: url('../header-back.jpg');
+    background-image: url("../header-back.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #cccccc;

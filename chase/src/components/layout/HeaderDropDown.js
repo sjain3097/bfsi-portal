@@ -1,20 +1,20 @@
-import React, { Component } from 'react';
-import { ReactComponent as MoneyCheck } from '../../svgs/money-check.svg';
-import { ReactComponent as PiggyBank } from '../../svgs/piggy-bank.svg';
-import { ReactComponent as Car } from '../../svgs/car-side.svg';
-import { ReactComponent as Wallet } from '../../svgs/wallet.svg';
-import { ReactComponent as Home } from '../../svgs/home.svg';
-import { ReactComponent as Briefcase } from '../../svgs/briefcase.svg';
-import { ReactComponent as City } from '../../svgs/city.svg';
-import { ReactComponent as More } from '../../svgs/more.svg';
-import { ReactComponent as CreditCard } from '../../svgs/credit-card.svg';
-import HeaderDropDownElement from './HeaderDropDownElement';
-import { connect } from 'react-redux';
+import React, { Component } from "react";
+import { ReactComponent as MoneyCheck } from "../../svgs/money-check.svg";
+import { ReactComponent as PiggyBank } from "../../svgs/piggy-bank.svg";
+import { ReactComponent as Car } from "../../svgs/car-side.svg";
+import { ReactComponent as Wallet } from "../../svgs/wallet.svg";
+import { ReactComponent as Home } from "../../svgs/home.svg";
+import { ReactComponent as Briefcase } from "../../svgs/briefcase.svg";
+import { ReactComponent as City } from "../../svgs/city.svg";
+import { ReactComponent as More } from "../../svgs/more.svg";
+import { ReactComponent as CreditCard } from "../../svgs/credit-card.svg";
+import HeaderDropDownElement from "./HeaderDropDownElement";
+import { connect } from "react-redux";
 import {
   hideHeaderDropDown,
   showHeaderDropDown
-} from '../../actions/HeaderActions';
-import { PropTypes } from 'prop-types';
+} from "../../actions/HeaderActions";
+import { PropTypes } from "prop-types";
 class HeaderDropDown extends Component {
   render() {
     return (
@@ -24,22 +24,22 @@ class HeaderDropDown extends Component {
         onMouseOver={this.props.showHeaderDropDown}
         onMouseOut={this.props.hideHeaderDropDown}
         style={{
-          width: '100%',
+          width: "100%",
           //height: '200px',
-          'background-color': this.props.headerColor,
+          "background-color": this.props.headerColor,
           //transition: 'background-color 1s ',
-          position: 'fixed',
-          top: '70px',
-          'z-index': '100'
+          position: "fixed",
+          top: "69px",
+          "z-index": "100"
         }}
       >
         <div
           className='container'
           style={{
-            display: 'grid',
-            'grid-template-columns': 'repeat(9, 1.2fr)',
+            display: "grid",
+            "grid-template-columns": "repeat(9, 1.2fr)",
             //'background-color': 'green',
-            height: '150px'
+            height: "150px"
           }}
         >
           <HeaderDropDownElement subTitle='Credit Card' Icon={CreditCard} />
