@@ -23,7 +23,7 @@ class Carousel extends Component {
       fifth: 4
     };
   }
-
+  //working
   previousSlide = () => {
     const lastIndex = imgUrls.length - 1;
     const { first, second, third, fourth, fifth } = this.state;
