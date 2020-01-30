@@ -1,15 +1,15 @@
-import React, { Component } from "react";
-import ImageSlide from "./ImageSlide";
-import Arrow from "./Arrow";
-import { ReactComponent as MoneyCheck } from "../../svgs/money-check.svg";
-import { ReactComponent as PiggyBank } from "../../svgs/piggy-bank.svg";
-import { ReactComponent as Car } from "../../svgs/car-side.svg";
-import { ReactComponent as Home } from "../../svgs/home.svg";
-import { ReactComponent as Briefcase } from "../../svgs/briefcase.svg";
-import { ReactComponent as CreditCard } from "../../svgs/credit-card.svg";
-import { ReactComponent as Tachometer } from "../../svgs/tachometer.svg";
-import { ReactComponent as PrivateClient } from "../../svgs/private-clients.svg";
-import { ReactComponent as Invest } from "../../svgs/invest.svg";
+import React, { Component } from 'react';
+import ImageSlide from './ImageSlide';
+import Arrow from './Arrow';
+import MoneyCheck from '../../svgs/money-check.svg';
+import PiggyBank from '../../svgs/piggy-bank.svg';
+import Car from '../../svgs/car-side.svg';
+import Home from '../../svgs/home.svg';
+import Briefcase from '../../svgs/briefcase.svg';
+import CreditCard from '../../svgs/credit-card.svg';
+import Tachometer from '../../svgs/tachometer.svg';
+import PrivateClient from '../../svgs/private-clients.svg';
+import Invest from '../../svgs/invest.svg';
 
 class Carousel extends Component {
   constructor(props) {
@@ -21,15 +21,15 @@ class Carousel extends Component {
       fourth: 3,
       fifth: 4,
       imgUrls: [
-        { icon: Tachometer, subtitle: "Free Credit Score" },
-        { icon: CreditCard, subtitle: "Find a credit card" },
-        { icon: Home, subtitle: "Home Lending" },
-        { icon: Car, subtitle: "Car Buying & Loans" },
-        { icon: PiggyBank, subtitle: "Savings Accounts & CDs" },
-        { icon: Briefcase, subtitle: "Chase for Business" },
-        { icon: PrivateClient, subtitle: "Chase Private Client" },
-        { icon: Invest, subtitle: "Invest" },
-        { icon: MoneyCheck, subtitle: "Schedule a meeting" }
+        { icon: Tachometer, subtitle: 'Free Credit Score' },
+        { icon: CreditCard, subtitle: 'Find a credit card' },
+        { icon: Home, subtitle: 'Home Lending' },
+        { icon: Car, subtitle: 'Car Buying & Loans' },
+        { icon: PiggyBank, subtitle: 'Savings Accounts & CDs' },
+        { icon: Briefcase, subtitle: 'Chase for Business' },
+        { icon: PrivateClient, subtitle: 'Chase Private Client' },
+        { icon: Invest, subtitle: 'Invest' },
+        { icon: MoneyCheck, subtitle: 'Schedule a meeting' }
       ]
     };
   }
@@ -106,12 +106,10 @@ class Carousel extends Component {
           </div>
           <div
             style={{
-              width: "auto",
-              // height: 'inherit',
-              width: "inherit",
-              backgroundColor: "blue",
-              display: "flex",
-              "justify-content": "center"
+              width: 'auto',
+              width: 'inherit',
+              display: 'flex',
+              'justify-content': 'center'
             }}
           >
             <ImageSlide
@@ -129,12 +127,12 @@ class Carousel extends Component {
             <ImageSlide
               Icon={this.state.imgUrls[this.state.fourth].icon}
               subtitle={this.state.imgUrls[this.state.fourth].subtitle}
-              hide='d-s-block'
+              hide='d-s-block d-xs-block'
             />
             <ImageSlide
               Icon={this.state.imgUrls[this.state.fifth].icon}
               subtitle={this.state.imgUrls[this.state.fifth].subtitle}
-              hide='d-s-block'
+              hide='d-s-block d-xs-block'
             />
           </div>
           <div className='slide_arrow--right'>
@@ -145,38 +143,6 @@ class Carousel extends Component {
             />
           </div>
         </div>
-        {/* <Arrow
-          direction='left'
-          clickFunction={this.previousSlide}
-          glyph={<i class='fa fa-angle-left'></i>}
-        />
-        <ImageSlide
-          Icon={this.state.imgUrls[this.state.first].icon}
-          subtitle={this.state.imgUrls[this.state.first].subtitle}
-        />
-        <ImageSlide
-          Icon={this.state.imgUrls[this.state.second].icon}
-          subtitle={this.state.imgUrls[this.state.second].subtitle}
-        />
-        <ImageSlide
-          Icon={this.state.imgUrls[this.state.third].icon}
-          subtitle={this.state.imgUrls[this.state.third].subtitle}
-        />
-        <ImageSlide
-          Icon={this.state.imgUrls[this.state.fourth].icon}
-          subtitle={this.state.imgUrls[this.state.fourth].subtitle}
-          hide='d-s-block'
-        />
-        <ImageSlide
-          Icon={this.state.imgUrls[this.state.fifth].icon}
-          subtitle={this.state.imgUrls[this.state.fifth].subtitle}
-          hide='d-s-block'
-        />
-        <Arrow
-          direction='right'
-          clickFunction={this.nextSlide}
-          glyph={<i class='fa fa-angle-right'></i>}
-        /> */}
       </div>
     );
   }

@@ -1,21 +1,29 @@
-import React from "react";
+import React from 'react';
+import home from '../../svgs/home.svg';
 const ImageSlide = ({ Icon, subtitle, hide }) => (
-  <span>
+  <div>
     <p
       className={hide}
+      // className='border'
       style={{
-        height: "70px",
-        width: "235px",
-        color: "#999999",
-        "text-color": "center"
-        // marginBottom: "30%"
-        // paddingTop: "0px"
-        // lineHeight: "0px"
+        height: '70px',
+        width: '235px',
+        color: '#999999',
+        'text-color': 'center'
       }}
     >
-      <Icon style={{ transform: "scale(0.2)" }} />
+      <img
+        style={{
+          height: '60px',
+          width: '200px',
+          color: '#999999',
+          'text-color': 'center',
+          filter: 'invert(0.5)'
+        }}
+        src={Icon}
+      />
     </p>
     <p className={hide}>{subtitle}</p>
-  </span>
+  </div>
 );
 export default ImageSlide;

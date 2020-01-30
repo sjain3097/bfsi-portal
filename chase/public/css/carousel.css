@@ -55,7 +55,7 @@
   height: 148px;
   width: 120px;
   font-size: 80px;
-  text-align: center;
+  vertical-align: bottom;
 
   /* background-color: blue; */
 }
@@ -65,7 +65,7 @@
   display: flex;
   color: #414042;
   text-align: center;
-  background-color: yellow;
+  /* background-color: yellow; */
 }
 /* Ipad media queries */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -99,7 +99,7 @@
   .carousel_container {
     height: 148px;
     width: 183%;
-    background-color: yellow;
+    /* background-color: yellow; */
   }
   .slide_arrow--right {
     height: 148px;
