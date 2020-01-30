@@ -1,10 +1,8 @@
 import React from 'react';
-import home from '../../svgs/home.svg';
 const ImageSlide = ({ Icon, subtitle, hide }) => (
   <div>
     <p
       className={hide}
-      // className='border'
       style={{
         height: '70px',
         width: '235px',
@@ -14,16 +12,17 @@ const ImageSlide = ({ Icon, subtitle, hide }) => (
     >
       <img
         style={{
-          height: '60px',
-          width: '200px',
-          color: '#999999',
+          height: '50px',
+          width: '100px',
           'text-color': 'center',
           filter: 'invert(0.5)'
         }}
         src={Icon}
       />
+      <p className={hide} style={{ color: '#126BC5', fontWeight: '600' }}>
+        {subtitle}
+      </p>
     </p>
-    <p className={hide}>{subtitle}</p>
   </div>
 );
 export default ImageSlide;

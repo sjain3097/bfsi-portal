@@ -10,6 +10,7 @@ import CreditCard from '../../svgs/credit-card.svg';
 import Tachometer from '../../svgs/tachometer.svg';
 import PrivateClient from '../../svgs/private-clients.svg';
 import Invest from '../../svgs/invest.svg';
+import SlickDots from './SlickDots';
 
 class Carousel extends Component {
   constructor(props) {
@@ -143,6 +144,7 @@ class Carousel extends Component {
             />
           </div>
         </div>
+        <SlickDots />
       </div>
     );
   }

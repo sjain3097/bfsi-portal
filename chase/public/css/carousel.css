@@ -30,7 +30,7 @@
 }
 .carousel__heading {
   font-size: 40px;
-  margin-left: 30%;
+  margin-left: 35%;
   color: #414042;
   font-weight: 300;
 }
@@ -66,6 +66,17 @@
   color: #414042;
   text-align: center;
   /* background-color: yellow; */
+}
+
+.slick_dot--button {
+  width: 10px;
+  height: 10px;
+  margin-left: 10px;
+  padding: 1px 2px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 50%;
+  border: 2px solid #999999;
 }
 /* Ipad media queries */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
