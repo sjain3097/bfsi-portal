@@ -19,16 +19,16 @@ import {
 } from '../../actions/HeaderActions';
 class Header extends Component {
   state = {
-    headerDropDown: 'd_block_drop_down',
+    // headerDropDown: 'd_block_drop_down',
     headerColor: this.props.color
   };
 
-  hideHeaderDropDown = e => {
-    this.setState({ headerDropDown: 'd_block_drop_down' });
-  };
-  showHeaderDropDown = e => {
-    this.setState({ headerDropDown: '' });
-  };
+  // hideHeaderDropDown = e => {
+  //   this.setState({ headerDropDown: 'd_block_drop_down' });
+  // };
+  // showHeaderDropDown = e => {
+  //   this.setState({ headerDropDown: '' });
+  // };
   render() {
     return (
       // background image at the start
@@ -69,10 +69,15 @@ class Header extends Component {
             {/* CENTER HEADER BLOCK */}
             <div className='col-6 col-md-4'>
               <div className='row'>
-                <div className='col-7 col-md-7 title '>
-                  <img className='chase_text' src='chase_text_white.png' />
+                <div className='col-7 col-md-7' style={{ textAlign: 'right' }}>
+                  <div
+                    className='title'
+                    style={{ 'margin-left': this.props.titleMargin }}
+                  >
+                    <img className='chase_text' src='chase_text_white.png' />
+                  </div>
                 </div>
-                <div className='col-2 col-md-5 '>
+                <div className='col-2 col-md-5'>
                   <span className='logo-container'>
                     <a href='index.html'>
                       <img className='logo' src='hexa_white.png' />
@@ -120,7 +125,10 @@ class Header extends Component {
 Header.propTypes = {
   openNav: PropTypes.func.isRequired
 };
-export default connect(null, {
+const mapStateToProps = state => {
+  return { titleMargin: state.header.titleMargin };
+};
+export default connect(mapStateToProps, {
   openNav,
   showHeaderDropDown,
   hideHeaderDropDown

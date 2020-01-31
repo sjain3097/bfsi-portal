@@ -1,7 +1,8 @@
 import {
   CHANGE_HEADER_COLOR,
   HIDE_HEADER_DROP_DOWN,
-  SHOW_HEADER_DROP_DOWN
+  SHOW_HEADER_DROP_DOWN,
+  CHANGE_TITLE_MARGIN
 } from './types';
 
 export const changeHeaderBlue = () => dispatch => {
@@ -33,5 +34,11 @@ export const showHeaderDropDown = () => dispatch => {
     headerDropDownHeight: '22%',
     headerDropDownElementHeight: '100%'
     // headerDropDownHeight: '100%'
+  });
+};
+export const animateTitle = () => dispatch => {
+  return dispatch({
+    type: CHANGE_TITLE_MARGIN,
+    titleMargin: '80%'
   });
 };

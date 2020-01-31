@@ -6,12 +6,17 @@ import Sidebar from './components/layout/Sidebar';
 import Carousel from './components/carousel/Carousel';
 import HeaderBackground from './components/layout/HeaderBackground';
 import PropTypes from 'prop-types';
-import { changeHeaderBlue, changeHeaderBlack } from './actions/HeaderActions';
+import {
+  changeHeaderBlue,
+  changeHeaderBlack,
+  animateTitle
+} from './actions/HeaderActions';
 import { connect } from 'react-redux';
 // import Trial from './components/transitions/trial';
 class App extends Component {
   state = { headerColor: 'rgba(0, 0, 0, 0.7)' };
   listenScrollEvent = e => {
+    //console.log(window.scrollY);
     if (window.scrollY > 384) {
       this.props.changeHeaderBlue();
     } else {
@@ -19,8 +24,16 @@ class App extends Component {
     }
   };
 
+  titleAnimate = e => {
+    if (window.scrollY < 200) {
+      console.log('title');
+      this.props.animateTitle();
+    }
+  };
+
   componentDidMount = () => {
     window.addEventListener('scroll', this.listenScrollEvent);
+    window.addEventListener('scroll', this.titleAnimate);
   };
 
   render() {
@@ -38,4 +51,8 @@ App.propTypes = {
   changeHeaderBlue: PropTypes.func.isRequired,
   changeHeaderBlack: PropTypes.func.isRequired
 };
-export default connect(null, { changeHeaderBlue, changeHeaderBlack })(App);
+export default connect(null, {
+  changeHeaderBlue,
+  changeHeaderBlack,
+  animateTitle
+})(App);
