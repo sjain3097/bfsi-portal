@@ -9,7 +9,8 @@ const initialState = {
   headerColor: 'rgba(0, 0, 0, 0.5)',
   headerDropDownHeight: '0%',
   headerDropDownElementHeight: '0%',
-  titleMargin: '0%'
+  titleMargin: '0%',
+  titleOpacity: '1'
 };
 export default function(state = initialState, action) {
   switch (action.type) {
@@ -30,7 +31,8 @@ export default function(state = initialState, action) {
     case CHANGE_TITLE_MARGIN:
       return {
         ...state,
-        titleMargin: action.titleMargin
+        titleMargin: action.titleMargin,
+        titleOpacity: action.titleOpacity
       };
     default:
       return state;

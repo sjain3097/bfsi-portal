@@ -72,7 +72,10 @@ class Header extends Component {
                 <div className='col-7 col-md-7' style={{ textAlign: 'right' }}>
                   <div
                     className='title'
-                    style={{ 'margin-left': this.props.titleMargin }}
+                    style={{
+                      'margin-left': this.props.titleMargin,
+                      opacity: this.props.titleOpacity
+                    }}
                   >
                     <img className='chase_text' src='chase_text_white.png' />
                   </div>
@@ -126,7 +129,10 @@ Header.propTypes = {
   openNav: PropTypes.func.isRequired
 };
 const mapStateToProps = state => {
-  return { titleMargin: state.header.titleMargin };
+  return {
+    titleMargin: state.header.titleMargin,
+    titleOpacity: state.header.titleOpacity
+  };
 };
 export default connect(mapStateToProps, {
   openNav,

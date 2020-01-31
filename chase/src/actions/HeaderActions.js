@@ -41,17 +41,20 @@ export const animateTitle = scroll_y => dispatch => {
   if (scroll_y === 0) {
     return dispatch({
       type: CHANGE_TITLE_MARGIN,
-      titleMargin: '0%'
+      titleMargin: '0%',
+      titleOpacity: '1'
     });
   } else if (scroll_y === 100) {
     return dispatch({
       type: CHANGE_TITLE_MARGIN,
-      titleMargin: '80%'
+      titleMargin: '80%',
+      titleOpacity: '0.4'
     });
   } else {
     return dispatch({
       type: CHANGE_TITLE_MARGIN,
-      titleMargin: '100%'
+      titleMargin: '100%',
+      titleOpacity: '0.4'
     });
   }
 };
