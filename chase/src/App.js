@@ -25,10 +25,16 @@ class App extends Component {
   };
 
   titleAnimate = e => {
-    if (window.scrollY < 200) {
+    //scrollY = window.scrollY;
+    console.log(window.scrollY);
+    if (window.scrollY <= 200) {
       console.log('title');
-      this.props.animateTitle();
+      this.props.animateTitle(window.scrollY);
     }
+    // else if (window.scrollY == 200) {
+    //   console.log('title');
+    //   this.props.animateTitle(200);
+    // }
   };
 
   componentDidMount = () => {

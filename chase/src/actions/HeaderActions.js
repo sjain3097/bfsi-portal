@@ -36,9 +36,22 @@ export const showHeaderDropDown = () => dispatch => {
     // headerDropDownHeight: '100%'
   });
 };
-export const animateTitle = () => dispatch => {
-  return dispatch({
-    type: CHANGE_TITLE_MARGIN,
-    titleMargin: '80%'
-  });
+export const animateTitle = scroll_y => dispatch => {
+  console.log(scroll_y);
+  if (scroll_y === 0) {
+    return dispatch({
+      type: CHANGE_TITLE_MARGIN,
+      titleMargin: '0%'
+    });
+  } else if (scroll_y === 100) {
+    return dispatch({
+      type: CHANGE_TITLE_MARGIN,
+      titleMargin: '80%'
+    });
+  } else {
+    return dispatch({
+      type: CHANGE_TITLE_MARGIN,
+      titleMargin: '100%'
+    });
+  }
 };
