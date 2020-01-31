@@ -21,12 +21,17 @@ export const changeHeaderBlack = () => dispatch => {
 export const hideHeaderDropDown = () => dispatch => {
   return dispatch({
     type: HIDE_HEADER_DROP_DOWN,
-    headerDropDown: 'd_block_drop_down'
+    // headerDropDown: 'd_block_drop_down',
+    headerDropDownHeight: '0%',
+    headerDropDownElementHeight: '0%'
   });
 };
 export const showHeaderDropDown = () => dispatch => {
   return dispatch({
     type: SHOW_HEADER_DROP_DOWN,
-    headerDropDown: ''
+    // headerDropDown: ''
+    headerDropDownHeight: '22%',
+    headerDropDownElementHeight: '100%'
+    // headerDropDownHeight: '100%'
   });
 };

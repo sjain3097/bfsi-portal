@@ -1,7 +1,18 @@
 import React, { Component } from 'react';
-
-const HeaderDropDownElement = ({ subTitle, Icon, link }) => (
-  <span className=''>
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+const HeaderDropDownElement = ({
+  subTitle,
+  Icon,
+  headerDropDownElementHeight = '0%'
+}) => (
+  <span
+    style={{
+      overflow: 'hidden',
+      height: headerDropDownElementHeight,
+      transition: '2s'
+    }}
+  >
     <a href={'link'} className='track__link'>
       <p
         className='col '
@@ -19,5 +30,13 @@ const HeaderDropDownElement = ({ subTitle, Icon, link }) => (
     </a>
   </span>
 );
+HeaderDropDownElement.propTypes = {
+  headerDropDownElementHeight: PropTypes.string.isRequired
+};
+const mapStateToProps = state => {
+  return {
+    headerDropDownElementHeight: state.header.headerDropDownElementHeight
+  };
+};
 
-export default HeaderDropDownElement;
+export default connect(mapStateToProps)(HeaderDropDownElement);

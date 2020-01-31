@@ -69,11 +69,11 @@ class Header extends Component {
             {/* CENTER HEADER BLOCK */}
             <div className='col-6 col-md-4'>
               <div className='row'>
-                <div className='col-6 col-md-6 title'>
+                <div className='col-7 col-md-7 title '>
                   <img className='chase_text' src='chase_text_white.png' />
                 </div>
-                <div className='col-3 col-md-6'>
-                  <span>
+                <div className='col-2 col-md-5 '>
+                  <span className='logo-container'>
                     <a href='index.html'>
                       <img className='logo' src='hexa_white.png' />
                     </a>

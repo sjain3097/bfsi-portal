@@ -9,13 +9,19 @@
   width: 100%;
   z-index: 100;
 }
-
+.title {
+  text-align: right;
+}
 .chase_text {
   width: 60%;
-  margin-left: 57%;
+  margin-right: -6%;
+  /* float: right; */
+  /* margin-left: 57%; */
+  /* margin-left: */
 }
 .logo {
-  width: 20%;
+  margin-left: -12%;
+  width: 27%;
 }
 .column-ipad {
   width: 20.33%;
@@ -182,10 +188,11 @@
   }
   .chase_text {
     width: 100%;
-    margin-left: 29%;
+    margin-right: -12%;
   }
   .logo {
-    width: 30%;
+    width: 55%;
+    margin-left: -25%;
   }
   .sign_in {
     margin-left: 40%;
@@ -230,15 +237,19 @@
     width: 60.66%;
   }
   .title {
+    overflow: hidden;
+    width: 0%;
     margin-left: 25%;
   }
   .chase_text {
-    width: 130%;
-    margin-left: 2%;
+    width: 90%;
+  }
+  .logo-container {
+    text-align: left;
   }
   .logo {
-    width: 120%;
-    margin-left: 4%;
+    width: 200%;
+    margin-left: -70%;
   }
   .sign_in {
     margin-right: 15%;
