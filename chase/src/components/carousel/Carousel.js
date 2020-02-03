@@ -107,39 +107,42 @@ class Carousel extends Component {
           </div>
           <div
             style={{
+              'overflow-x': 'hidden',
               width: 'auto',
-              width: 'inherit',
+              width: '90%',
               display: 'flex',
-              'justify-content': 'center'
+              backgroundColor: 'yellow'
             }}
           >
+            {this.state.imgUrls.map(imageSlide => (
+              <ImageSlide
+                Icon={imageSlide.icon}
+                subtitle={imageSlide.subtitle}
+              />
+            ))}
             {/* <div id='slider' className='border'></div> */}
-            <ImageSlide
+            {/* <ImageSlide
               Icon={this.state.imgUrls[this.state.first].icon}
               subtitle={this.state.imgUrls[this.state.first].subtitle}
             />
-            {/* <div className='slider border'></div> */}
             <ImageSlide
               Icon={this.state.imgUrls[this.state.second].icon}
               subtitle={this.state.imgUrls[this.state.second].subtitle}
             />
-            {/* <div className='slider border'></div> */}
             <ImageSlide
               Icon={this.state.imgUrls[this.state.third].icon}
               subtitle={this.state.imgUrls[this.state.third].subtitle}
             />
-            {/* <div className='slider border'></div> */}
             <ImageSlide
               Icon={this.state.imgUrls[this.state.fourth].icon}
               subtitle={this.state.imgUrls[this.state.fourth].subtitle}
               hide='d-s-block d-xs-block'
             />
-            {/* <div className='slider border'></div> */}
             <ImageSlide
               Icon={this.state.imgUrls[this.state.fifth].icon}
               subtitle={this.state.imgUrls[this.state.fifth].subtitle}
               hide='d-s-block d-xs-block'
-            />
+            /> */}
           </div>
           <div className='slide_arrow--right'>
             <Arrow
