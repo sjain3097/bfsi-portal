@@ -6,6 +6,7 @@ import Sidebar from './components/layout/Sidebar';
 import Carousel from './components/carousel/Carousel';
 import HeaderBackground from './components/layout/HeaderBackground';
 import PropTypes from 'prop-types';
+import $ from 'jquery';
 import {
   changeHeaderBlue,
   changeHeaderBlack,

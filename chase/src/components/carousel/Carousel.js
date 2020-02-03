@@ -11,7 +11,7 @@ import Tachometer from '../../svgs/tachometer.svg';
 import PrivateClient from '../../svgs/private-clients.svg';
 import Invest from '../../svgs/invest.svg';
 import SlickDots from './SlickDots';
-
+import { TodoApp } from './Dots';
 class Carousel extends Component {
   constructor(props) {
     super(props);
@@ -85,7 +85,7 @@ class Carousel extends Component {
     this.setState({
       fifth: n_fifth
     });
-    console.log(this.state);
+    // console.log(this.state);
   };
 
   render() {
@@ -113,23 +113,28 @@ class Carousel extends Component {
               'justify-content': 'center'
             }}
           >
+            {/* <div id='slider' className='border'></div> */}
             <ImageSlide
               Icon={this.state.imgUrls[this.state.first].icon}
               subtitle={this.state.imgUrls[this.state.first].subtitle}
             />
+            {/* <div className='slider border'></div> */}
             <ImageSlide
               Icon={this.state.imgUrls[this.state.second].icon}
               subtitle={this.state.imgUrls[this.state.second].subtitle}
             />
+            {/* <div className='slider border'></div> */}
             <ImageSlide
               Icon={this.state.imgUrls[this.state.third].icon}
               subtitle={this.state.imgUrls[this.state.third].subtitle}
             />
+            {/* <div className='slider border'></div> */}
             <ImageSlide
               Icon={this.state.imgUrls[this.state.fourth].icon}
               subtitle={this.state.imgUrls[this.state.fourth].subtitle}
               hide='d-s-block d-xs-block'
             />
+            {/* <div className='slider border'></div> */}
             <ImageSlide
               Icon={this.state.imgUrls[this.state.fifth].icon}
               subtitle={this.state.imgUrls[this.state.fifth].subtitle}
@@ -144,7 +149,8 @@ class Carousel extends Component {
             />
           </div>
         </div>
-        <SlickDots />
+        <SlickDots currentPage={this.state.first + 1} />
+        {/* <TodoApp /> */}
       </div>
     );
   }
