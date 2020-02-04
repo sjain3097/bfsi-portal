@@ -11,7 +11,7 @@ import Tachometer from '../../svgs/tachometer.svg';
 import PrivateClient from '../../svgs/private-clients.svg';
 import Invest from '../../svgs/invest.svg';
 import SlickDots from './SlickDots';
-import { TodoApp } from './Dots';
+import $ from 'jquery';
 const imgUrls = [
   { index: 0, icon: Tachometer, subtitle: 'Free Credit Score' },
   { index: 1, icon: MoneyCheck, subtitle: 'Schedule a meeting' },
@@ -26,119 +26,60 @@ const imgUrls = [
 class Carousel extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      start: 0,
-      end: 4,
-      properties: imgUrls,
-      property: imgUrls[0]
-      // transition:
-    };
+    this.state = { cards: imgUrls };
+  }
+
+  componentDidUpdate() {
+    $('#myCarousel').on('slide.bs.carousel', function(e) {
+      var $e = $(e.relatedTarget);
+      var idx = $e.index();
+      var itemsPerSlide = 3;
+      var totalItems = $('.carousel-item').length;
+
+      if (idx >= totalItems - (itemsPerSlide - 1)) {
+        var it = itemsPerSlide - (totalItems - idx);
+        for (var i = 0; i < it; i++) {
+          // append slides to end
+          if (e.direction == 'left') {
+            $('.carousel-item')
+              .eq(i)
+              .appendTo('.carousel-inner');
+          } else {
+            $('.carousel-item')
+              .eq(0)
+              .appendTo($(this).find('.carousel-inner'));
+          }
+        }
+      }
+    });
   }
   //working
-  previousSlide = () => {
-    const newIndex = this.state.property.index - 1;
-    // console.log(newIndex);
-    if (newIndex >= 0) {
-      this.setState({
-        property: this.state.properties[newIndex],
-        start: this.state.start - 1,
-        end: this.state.end - 1
-      });
-    } else {
-      this.setState({
-        property: this.state.properties[this.state.properties.length - 5],
-        start: 4,
-        end: 8
-      });
-    }
-  };
+  previousSlide = () => {};
 
-  nextSlide = () => {
-    const newIndex = this.state.property.index + 1;
-    if (newIndex < this.state.properties.length - 4)
-      this.setState({
-        property: this.state.properties[newIndex],
-        start: this.state.start + 1,
-        end: this.state.end + 1
-      });
-    else {
-      this.setState({
-        property: this.state.properties[0],
-        start: 0,
-        end: 4
-      });
-    }
-    // console.log(newIndex);
-  };
+  nextSlide = () => {};
 
   render() {
-    const { properties, property } = this.state;
-    const carouselItems = this.state.properties.map(imageSlide => {
-      return this.state.start <= imageSlide.index &&
-        this.state.end >= imageSlide.index ? (
-        <ImageSlide
-          id={`slick-${imageSlide.index}-active`}
-          Icon={imageSlide.icon}
-          subtitle={imageSlide.subtitle}
-        />
-      ) : (
-        <ImageSlide
-          id={`slick-${imageSlide.index}`}
-          Icon={imageSlide.icon}
-          subtitle={imageSlide.subtitle}
-        />
-      );
-    });
     return (
-      <div>
-        <div className='carousel__heading--container'>
-          <span className='carousel__heading'>Choose what's right for you</span>
-        </div>
-        <div
-          className='carousel_container'
-          //style={{ height: '148px', width: '100%', backgroundColor: 'yellow' }}
-        >
-          <div className='slide_arrow--left'>
-            <Arrow
-              direction='left'
-              clickFunction={this.previousSlide}
-              glyph={<i class='fa fa-angle-left'></i>}
-            />
-          </div>
+      <div className='container-fluid'>
+        <span className='carousel__heading'>Choose what's right for you</span>
+        <div style={{}}>
           <div
+            className=''
             style={{
-              //overflow: 'hidden',
-              position: 'relative'
+              backgroundColor: 'yellow',
+              display: 'flex',
+              width: '70%'
             }}
           >
-            <div
-              style={{
-                // position: 'absolute',
-                // width: '90%',
-                marginLeft: '5%',
-                // width: '90%',
-                display: 'flex',
-                // backgroundColor: 'yellow',
-                transition:
-                  'transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955),visibility 0s, opacity 0.5s linear',
-                // transform: this.state.transition,
-                transform: `translate3d(-${property.index *
-                  (100 / properties.length)}%, 0px, 0px)`
-              }}
-            >
-              {carouselItems}
-            </div>
-          </div>
-          <div className='slide_arrow--right'>
-            <Arrow
-              direction='right'
-              clickFunction={this.nextSlide}
-              glyph={<i class='fa fa-angle-right'></i>}
-            />
+            {this.state.cards.map(card => (
+              <ImageSlide
+                id={`slick-${card.index}-active`}
+                Icon={card.icon}
+                subtitle={card.subtitle}
+              />
+            ))}
           </div>
         </div>
-        <SlickDots currentPage={this.state.property.index + 1} />
-        {/* <TodoApp /> */}
       </div>
     );
   }

@@ -3,27 +3,20 @@ const ImageSlide = ({ Icon, subtitle, hide, id }) => (
   <div id={id}>
     <p
       className={hide}
+      className='carousel_item'
       // className='border'
-      style={{
-        height: '70px',
-        width: '235px',
-        color: '#999999',
-        'text-color': 'center',
-        overflow: 'hidden'
-      }}
     >
-      <img
-        id='slider'
-        // style={{
-        //   height: '50px',
-        //   width: '100px',
-        //   'text-color': 'center',
-        //   filter: 'invert(0.5)'
-        //   // left: -100,
-        // }}
-        src={Icon}
-      />
-      <p className={hide} style={{ color: '#126BC5', fontWeight: '600' }}>
+      <img id='slider' src={Icon} />
+      <p
+        className={``}
+        style={{
+          color: '#126BC5',
+          fontWeight: '600',
+          width: '70%',
+          textAlign: 'center',
+          'line-height': '1.333em'
+        }}
+      >
         {subtitle}
       </p>
     </p>
