@@ -12,83 +12,83 @@ import PrivateClient from '../../svgs/private-clients.svg';
 import Invest from '../../svgs/invest.svg';
 import SlickDots from './SlickDots';
 import { TodoApp } from './Dots';
+const imgUrls = [
+  { index: 0, icon: Tachometer, subtitle: 'Free Credit Score' },
+  { index: 1, icon: MoneyCheck, subtitle: 'Schedule a meeting' },
+  { index: 2, icon: CreditCard, subtitle: 'Find a credit card' },
+  { index: 3, icon: Home, subtitle: 'Home Lending' },
+  { index: 4, icon: Car, subtitle: 'Car Buying & Loans' },
+  { index: 5, icon: PiggyBank, subtitle: 'Savings Accounts & CDs' },
+  { index: 6, icon: Briefcase, subtitle: 'Chase for Business' },
+  { index: 7, icon: PrivateClient, subtitle: 'Chase Private Client' },
+  { index: 8, icon: Invest, subtitle: 'Invest' }
+];
 class Carousel extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      first: 0,
-      second: 1,
-      third: 2,
-      fourth: 3,
-      fifth: 4,
-      imgUrls: [
-        { icon: Tachometer, subtitle: 'Free Credit Score' },
-        { icon: CreditCard, subtitle: 'Find a credit card' },
-        { icon: Home, subtitle: 'Home Lending' },
-        { icon: Car, subtitle: 'Car Buying & Loans' },
-        { icon: PiggyBank, subtitle: 'Savings Accounts & CDs' },
-        { icon: Briefcase, subtitle: 'Chase for Business' },
-        { icon: PrivateClient, subtitle: 'Chase Private Client' },
-        { icon: Invest, subtitle: 'Invest' },
-        { icon: MoneyCheck, subtitle: 'Schedule a meeting' }
-      ]
+      start: 0,
+      end: 4,
+      properties: imgUrls,
+      property: imgUrls[0]
+      // transition:
     };
   }
   //working
   previousSlide = () => {
-    const lastIndex = this.state.imgUrls.length - 1;
-    const { first, second, third, fourth, fifth } = this.state;
-    const n_first = first === 0 ? lastIndex : first - 1;
-    // console.log(n_first);
-    this.setState({
-      first: n_first
-    });
-    const n_second = second === 0 ? lastIndex : second - 1;
-    this.setState({
-      second: n_second
-    });
-    const n_third = third === 0 ? lastIndex : third - 1;
-    this.setState({
-      third: n_third
-    });
-    const n_fourth = fourth === 0 ? lastIndex : fourth - 1;
-    this.setState({
-      fourth: n_fourth
-    });
-    const n_fifth = fifth === 0 ? lastIndex : fifth - 1;
-    this.setState({
-      fifth: n_fifth
-    });
-    console.log(this.state);
+    const newIndex = this.state.property.index - 1;
+    // console.log(newIndex);
+    if (newIndex >= 0) {
+      this.setState({
+        property: this.state.properties[newIndex],
+        start: this.state.start - 1,
+        end: this.state.end - 1
+      });
+    } else {
+      this.setState({
+        property: this.state.properties[this.state.properties.length - 5],
+        start: 4,
+        end: 8
+      });
+    }
   };
 
   nextSlide = () => {
-    const lastIndex = this.state.imgUrls.length - 1;
-    const { first, second, third, fourth, fifth } = this.state;
-    const n_first = first === lastIndex ? 0 : first + 1;
-    this.setState({
-      first: n_first
-    });
-    const n_second = second === lastIndex ? 0 : second + 1;
-    this.setState({
-      second: n_second
-    });
-    const n_third = third === lastIndex ? 0 : third + 1;
-    this.setState({
-      third: n_third
-    });
-    const n_fourth = fourth === lastIndex ? 0 : fourth + 1;
-    this.setState({
-      fourth: n_fourth
-    });
-    const n_fifth = fifth === lastIndex ? 0 : fifth + 1;
-    this.setState({
-      fifth: n_fifth
-    });
-    // console.log(this.state);
+    const newIndex = this.state.property.index + 1;
+    if (newIndex < this.state.properties.length - 4)
+      this.setState({
+        property: this.state.properties[newIndex],
+        start: this.state.start + 1,
+        end: this.state.end + 1
+      });
+    else {
+      this.setState({
+        property: this.state.properties[0],
+        start: 0,
+        end: 4
+      });
+    }
+    // console.log(newIndex);
   };
 
   render() {
+    const { properties, property } = this.state;
+    const carouselItems = this.state.properties.map(imageSlide => {
+      return this.state.start <= imageSlide.index &&
+        this.state.end >= imageSlide.index ? (
+        <ImageSlide
+          id={`slick-${imageSlide.index}-active`}
+          Icon={imageSlide.icon}
+          subtitle={imageSlide.subtitle}
+        />
+      ) : (
+        <ImageSlide
+          id={`slick-${imageSlide.index}`}
+          Icon={imageSlide.icon}
+          subtitle={imageSlide.subtitle}
+        />
+      );
+    });
     return (
       <div>
         <div className='carousel__heading--container'>
@@ -107,42 +107,27 @@ class Carousel extends Component {
           </div>
           <div
             style={{
-              'overflow-x': 'hidden',
-              width: 'auto',
-              width: '90%',
-              display: 'flex',
-              backgroundColor: 'yellow'
+              //overflow: 'hidden',
+              position: 'relative'
             }}
           >
-            {this.state.imgUrls.map(imageSlide => (
-              <ImageSlide
-                Icon={imageSlide.icon}
-                subtitle={imageSlide.subtitle}
-              />
-            ))}
-            {/* <div id='slider' className='border'></div> */}
-            {/* <ImageSlide
-              Icon={this.state.imgUrls[this.state.first].icon}
-              subtitle={this.state.imgUrls[this.state.first].subtitle}
-            />
-            <ImageSlide
-              Icon={this.state.imgUrls[this.state.second].icon}
-              subtitle={this.state.imgUrls[this.state.second].subtitle}
-            />
-            <ImageSlide
-              Icon={this.state.imgUrls[this.state.third].icon}
-              subtitle={this.state.imgUrls[this.state.third].subtitle}
-            />
-            <ImageSlide
-              Icon={this.state.imgUrls[this.state.fourth].icon}
-              subtitle={this.state.imgUrls[this.state.fourth].subtitle}
-              hide='d-s-block d-xs-block'
-            />
-            <ImageSlide
-              Icon={this.state.imgUrls[this.state.fifth].icon}
-              subtitle={this.state.imgUrls[this.state.fifth].subtitle}
-              hide='d-s-block d-xs-block'
-            /> */}
+            <div
+              style={{
+                // position: 'absolute',
+                // width: '90%',
+                marginLeft: '5%',
+                // width: '90%',
+                display: 'flex',
+                // backgroundColor: 'yellow',
+                transition:
+                  'transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955),visibility 0s, opacity 0.5s linear',
+                // transform: this.state.transition,
+                transform: `translate3d(-${property.index *
+                  (100 / properties.length)}%, 0px, 0px)`
+              }}
+            >
+              {carouselItems}
+            </div>
           </div>
           <div className='slide_arrow--right'>
             <Arrow
@@ -152,7 +137,7 @@ class Carousel extends Component {
             />
           </div>
         </div>
-        <SlickDots currentPage={this.state.first + 1} />
+        <SlickDots currentPage={this.state.property.index + 1} />
         {/* <TodoApp /> */}
       </div>
     );

@@ -11,19 +11,23 @@
 .slide_arrow--right {
   height: 148px;
   width: 120px;
+  position: absolute;
   /* background-color: blue; */
-  /* margin-left: 90%; */
+  margin-left: 90%;
   /* margin-top: -10.3%; */
   font-size: 80px;
   text-align: center;
 }
 .slide_arrow--left {
+  z-index: 2000;
+  position: absolute;
   height: 148px;
   width: 120px;
   font-size: 80px;
   vertical-align: bottom;
 }
 .carousel_container {
+  overflow-x: hidden;
   height: 148px;
   width: 100%;
   display: flex;
@@ -64,16 +68,62 @@
   animation-delay: 2s;
   /* left: -100px; */
 }
-/* @-webkit-keyframes slider {
-  100% {
-    left: 190px;
-  }
-} */
-@keyframes slider {
-  100% {
-    width: 190px;
-  }
+#slick-0-active {
+  visibility: visible;
 }
+#slick-1-active {
+  display: inline-block;
+}
+#slick-2-active {
+  display: inline-block;
+}
+#slick-3-active {
+  display: inline-block;
+}
+#slick-4-active {
+  display: inline-block;
+}
+#slick-5-active {
+  display: inline-block;
+}
+#slick-6-active {
+  display: inline-block;
+}
+#slick-7-active {
+  display: inline-block;
+}
+#slick-8-active {
+  display: inline-block;
+}
+
+#slick-0 {
+  visibility: hidden;
+}
+#slick-1 {
+  visibility: hidden;
+}
+#slick-2 {
+  visibility: hidden;
+}
+#slick-3 {
+  visibility: hidden;
+}
+#slick-4 {
+  visibility: hidden;
+}
+#slick-5 {
+  visibility: hidden;
+}
+#slick-6 {
+  visibility: hidden;
+}
+#slick-7 {
+  visibility: hidden;
+}
+#slick-8 {
+  visibility: hidden;
+}
+
 /* Ipad media queries */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .slide_arrow--right {

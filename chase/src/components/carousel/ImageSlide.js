@@ -1,6 +1,6 @@
 import React from 'react';
-const ImageSlide = ({ Icon, subtitle, hide }) => (
-  <div>
+const ImageSlide = ({ Icon, subtitle, hide, id }) => (
+  <div id={id}>
     <p
       className={hide}
       // className='border'
