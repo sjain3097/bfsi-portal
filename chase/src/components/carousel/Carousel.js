@@ -38,11 +38,6 @@ class Carousel extends Component {
       cards: imgUrls,
       card: imgUrls[0],
       transition: 0
-      // first: 0,
-      // second: 1,
-      // third: 2,
-      // fourth: 3,
-      // current: 4
     };
   }
 
