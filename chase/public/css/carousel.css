@@ -11,20 +11,21 @@
 .slide_arrow--right {
   height: 148px;
   width: 120px;
-  position: absolute;
+  z-index: 50;
+  /* position: absolute; */
   /* background-color: blue; */
-  margin-left: 90%;
+  /* margin-left: 90%; */
   /* margin-top: -10.3%; */
   font-size: 80px;
-  text-align: center;
+  text-align: right;
 }
 .slide_arrow--left {
   z-index: 50;
-  position: absolute;
+  /* position: absolute; */
   height: 148px;
   width: 120px;
   font-size: 80px;
-  vertical-align: bottom;
+  /* vertical-align: bottom; */
 }
 .carousel_container {
   overflow-x: hidden;
