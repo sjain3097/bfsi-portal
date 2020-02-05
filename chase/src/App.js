@@ -6,7 +6,7 @@ import Sidebar from './components/layout/Sidebar';
 import Carousel from './components/carousel/Carousel';
 import HeaderBackground from './components/layout/HeaderBackground';
 import PropTypes from 'prop-types';
-import $ from 'jquery';
+import MosaicContainer from './components/mosaic/MosaicContainer';
 import {
   changeHeaderBlue,
   changeHeaderBlack,
@@ -26,16 +26,11 @@ class App extends Component {
   };
 
   titleAnimate = e => {
-    //scrollY = window.scrollY;
     console.log(window.scrollY);
     if (window.scrollY <= 200) {
-      console.log('title');
+      // console.log('title');
       this.props.animateTitle(window.scrollY);
     }
-    // else if (window.scrollY == 200) {
-    //   console.log('title');
-    //   this.props.animateTitle(200);
-    // }
   };
 
   componentDidMount = () => {
@@ -49,6 +44,7 @@ class App extends Component {
         <Sidebar />
         <HeaderBackground />
         <Carousel />
+        <MosaicContainer />
         {/* <Trial /> */}
       </div>
     );
