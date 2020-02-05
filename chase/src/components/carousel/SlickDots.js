@@ -4,13 +4,13 @@ export default class SlickDots extends Component {
   //   state = { current };
   componentDidUpdate() {
     $('button.active').removeClass('active');
-    $('#' + this.props.currentPage).addClass('active');
+    $('#' + this.props.currentCard).addClass('active');
   }
   render() {
     // const children = this.props.children;
-    // console.log(children);
+    console.log(this.props.currentCard);
     const dots = [];
-    for (let i = 1; i <= 9; i++) {
+    for (let i = 1; i <= 5; i++) {
       dots.push(i);
     }
     const renderDots = dots.map(number => {

@@ -13,6 +13,9 @@ import Invest from '../../svgs/invest.svg';
 import SlickDots from './SlickDots';
 import $ from 'jquery';
 const imgUrls = [
+  // { index: 8, icon: Invest, subtitle: 'Invest' },
+  // { index: 7, icon: PrivateClient, subtitle: 'Chase Private Client' },
+  // { index: 6, icon: Briefcase, subtitle: 'Chase for Business' },
   { index: 0, icon: Tachometer, subtitle: 'Free Credit Score' },
   { index: 1, icon: MoneyCheck, subtitle: 'Schedule a meeting' },
   { index: 2, icon: CreditCard, subtitle: 'Find a credit card' },
@@ -22,6 +25,10 @@ const imgUrls = [
   { index: 6, icon: Briefcase, subtitle: 'Chase for Business' },
   { index: 7, icon: PrivateClient, subtitle: 'Chase Private Client' },
   { index: 8, icon: Invest, subtitle: 'Invest' }
+  // { index: 0, icon: Tachometer, subtitle: 'Free Credit Score' },
+  // { index: 1, icon: MoneyCheck, subtitle: 'Schedule a meeting' },
+  // { index: 2, icon: CreditCard, subtitle: 'Find a credit card' },
+  // { index: 3, icon: Home, subtitle: 'Home Lending' }
   // { index: 0, icon: Tachometer, subtitle: 'Free Credit Score' }
 ];
 class Carousel extends Component {
@@ -57,16 +64,10 @@ class Carousel extends Component {
       });
     }
   };
+
   nextSlide = () => {
     const oldIndex = this.state.card.index;
     if (oldIndex != this.state.cards.length - 5) {
-      // let cards = this.state.cards;
-      // cards.push(cards[this.state.cards.length - oldIndex - 1]);
-      // // cards.shift();
-      // cards.forEach(function(part, i) {
-      //   this[i].index = i;
-      // }, cards);
-      // console.log(cards);
       const newIndex = oldIndex + 1;
       this.setState({
         card: this.state.cards[newIndex],
@@ -79,16 +80,6 @@ class Carousel extends Component {
       });
     }
   };
-  // nextSlide = () => {
-  //   const { current } = this.state;
-  //   this.setState({
-  //     fourth: current,
-  //     third: this.state.fourth,
-  //     second: this.state.third,
-  //     first: this.state.second
-  //   });
-  //   this.setState({ current: (current + 1) % this.state.cards.length });
-  // };
 
   render() {
     const { card, cards, current, first, second, third, fourth } = this.state;
@@ -132,31 +123,6 @@ class Carousel extends Component {
                   subtitle={card.subtitle}
                 />
               ))}
-              {/* <ImageSlide
-              id={`slick-${this.state.cards[first].index}`}
-              Icon={cards[first].icon}
-              subtitle={cards[first].subtitle}
-            />
-            <ImageSlide
-              id={`slick-${cards[second].index}`}
-              Icon={cards[second].icon}
-              subtitle={cards[second].subtitle}
-            />
-            <ImageSlide
-              id={`slick-${cards[third].index}`}
-              Icon={cards[third].icon}
-              subtitle={cards[third].subtitle}
-            />
-            <ImageSlide
-              id={`slick-${cards[fourth].index}`}
-              Icon={cards[fourth].icon}
-              subtitle={cards[fourth].subtitle}
-            />
-            <ImageSlide
-              id={`slick-${cards[current].index}`}
-              Icon={cards[current].icon}
-              subtitle={cards[current].subtitle}
-            /> */}
             </div>
           </div>
           <div className='slide_arrow--right'>
@@ -167,6 +133,8 @@ class Carousel extends Component {
             />
           </div>
         </div>
+
+        <SlickDots currentCard={this.state.card.index + 1} />
       </div>
     );
   }
