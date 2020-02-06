@@ -37,7 +37,7 @@ export const showHeaderDropDown = () => dispatch => {
   });
 };
 export const animateTitle = scroll_y => dispatch => {
-  console.log(scroll_y);
+  // console.log(scroll_y);
   if (scroll_y === 0) {
     return dispatch({
       type: CHANGE_TITLE_MARGIN,
