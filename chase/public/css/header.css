@@ -227,7 +227,7 @@
 
 /* iphone-x media queries  */
 /* @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) { */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 760px) {
   .backgroung-img {
     background-image: url('../header-back.jpg');
     background-repeat: no-repeat;
@@ -241,8 +241,9 @@
     display: none;
   }
   .column-ipad {
-    margin-left: 40%;
-    width: 60.66%;
+    /* margin-left: 40%; */
+    text-align: right;
+    width: 100%;
   }
   .title {
     overflow: hidden;
@@ -262,7 +263,7 @@
     margin-right: 15%;
   }
   .button {
-    font-size: 16px;
+    font-size: 26px;
     border: none;
     background-color: inherit;
   }

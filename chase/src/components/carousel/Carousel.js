@@ -80,7 +80,9 @@ class Carousel extends Component {
     const { card, cards, current, first, second, third, fourth } = this.state;
     return (
       <div className='container-fluid'>
-        <div className='carousel__heading'>Choose what's right for you</div>
+        <div className='carousel__heading--container'>
+          <div className='carousel__heading'>Choose what's right for you</div>
+        </div>
         <div className='carousel__container'>
           <div className='slide_arrow--left d-xs-block'>
             <Arrow

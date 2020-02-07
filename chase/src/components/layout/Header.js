@@ -42,9 +42,9 @@ class Header extends Component {
         >
           {/* left header block */}
           <div className='row'>
-            <div className=' col-2 col-md-4'>
+            <div className=' col-4 col-md-4 '>
               <div className='row'>
-                <div className='col-6 col-md-4'>
+                <div className='col-6 col-md-4 '>
                   <a className='btn'>
                     <i
                       className='fa fa-bars fa-2x '
@@ -67,9 +67,9 @@ class Header extends Component {
             </div>
 
             {/* CENTER HEADER BLOCK */}
-            <div className='col-6 col-md-4'>
+            <div className='col-5 col-md-4 '>
               <div className='row'>
-                <div className='col-7 col-md-7' style={{ textAlign: 'right' }}>
+                <div className='col-7 col-md-7 ' style={{ textAlign: 'right' }}>
                   <div
                     className='title'
                     style={{
@@ -80,7 +80,7 @@ class Header extends Component {
                     <img className='chase_text' src='chase_text_white.png' />
                   </div>
                 </div>
-                <div className='col-2 col-md-5'>
+                <div className='col-2 col-md-5 '>
                   <span className='logo-container'>
                     <a href='index.html'>
                       <img className='logo' src='hexa_white.png' />
@@ -91,7 +91,7 @@ class Header extends Component {
             </div>
 
             {/* right header block */}
-            <div className='col-4 col-md-4'>
+            <div className='col-3 col-md-4 '>
               <div className='row'>
                 <div className='col-md-4 d-s-block d-xs-block'>
                   <a className='track_link' href=''>
@@ -103,7 +103,7 @@ class Header extends Component {
                     Español
                   </a>
                 </div>
-                <div className='column-ipad'>
+                <div className='column-ipad '>
                   <a className='sign_in button' href=''>
                     Sign in
                   </a>

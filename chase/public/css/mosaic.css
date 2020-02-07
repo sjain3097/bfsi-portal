@@ -1,6 +1,6 @@
 .mosaic_container {
   display: flex;
-  width: 70%;
+  /* width: 70%; */
   margin: 4% 7% 0 7%;
   text-align: center;
 }
@@ -17,7 +17,7 @@
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .mosaic_container {
     display: flex;
-    width: 70%;
+    /* width: 70%; */
     /* margin: 4% 7% 0 7%; */
     margin-left: 1.4em;
     text-align: center;
@@ -37,18 +37,19 @@
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) {
   .mosaic_container {
     display: block;
-    width: 70%;
+    /* width: 70%; */
     /* margin: 4% 7% 0 7%; */
     margin-left: 1.4em;
     text-align: center;
   }
   .mosaic_tile {
     padding: 0;
-    width: 150%;
-    height: 150%;
+    /* width: 150%;
+    height: 150%; */
   }
   .mosaic_img {
-    width: 150%;
-    height: 150%;
+    width: 204%;
+    margin-top: 8%;
+    /* height: 130%; */
   }
 }
