@@ -80,32 +80,19 @@ class Carousel extends Component {
     const { card, cards, current, first, second, third, fourth } = this.state;
     return (
       <div className='container-fluid'>
-        <span className='carousel__heading'>Choose what's right for you</span>
-        <div style={{ position: 'relative', display: 'flex' }}>
-          <div className='slide_arrow--left'>
+        <div className='carousel__heading'>Choose what's right for you</div>
+        <div className='carousel__container'>
+          <div className='slide_arrow--left d-xs-block'>
             <Arrow
               direction='left'
               clickFunction={this.previousSlide}
               glyph={<i class='fa fa-angle-left'></i>}
             />
           </div>
-          <div
-            style={{
-              // backgroundColor: 'yellow',
-              display: 'flex',
-              position: 'relative',
-              width: '70%',
-              overflow: 'hidden'
-            }}
-          >
+          <div className='carousel__outer'>
             <div
-              className=''
+              className='carousel__inner'
               style={{
-                // backgroundColor: 'yellow',
-                display: 'flex',
-                position: 'absolute',
-                transition:
-                  'transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955),visibility 0s, opacity 0.5s linear',
                 transform: `translate3d(-${card.index *
                   (100 / cards.length)}%, 0px, 0px)`
               }}
@@ -120,7 +107,7 @@ class Carousel extends Component {
               ))}
             </div>
           </div>
-          <div className='slide_arrow--right'>
+          <div className='slide_arrow--right d-xs-block'>
             <Arrow
               direction='right'
               clickFunction={this.nextSlide}

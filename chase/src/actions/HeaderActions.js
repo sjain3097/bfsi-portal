@@ -101,7 +101,7 @@ export const animateTitle = scroll_y => dispatch => {
   } else {
     return dispatch({
       type: CHANGE_TITLE_MARGIN,
-      titleMargin: '100%',
+      titleMargin: '120%',
       titleOpacity: '0.4'
     });
   }
