@@ -13,6 +13,7 @@ import {
   animateTitle
 } from './actions/HeaderActions';
 import { connect } from 'react-redux';
+import AdsContainer from './components/Ads/AdsContainer';
 // import Trial from './components/transitions/trial';
 class App extends Component {
   state = { headerColor: 'rgba(0, 0, 0, 0.7)' };
@@ -45,6 +46,7 @@ class App extends Component {
         <HeaderBackground />
         <Carousel />
         <MosaicContainer />
+        <AdsContainer />
         {/* <Trial /> */}
       </div>
     );
