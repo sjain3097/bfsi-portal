@@ -1,7 +1,7 @@
 import React from 'react';
 const NewsMosaicTile = ({ imgUrl, content }) => {
   return (
-    <div className='col-md-3'>
+    <div className=' col-6 col-sm-4 col-md-3'>
       <a href='' style={{ textDecoration: 'none' }}>
         <div>
           <img style={{ width: '106%' }} src={imgUrl} />
