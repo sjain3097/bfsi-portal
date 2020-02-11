@@ -7,6 +7,7 @@ import Carousel from './components/carousel/Carousel';
 import HeaderBackground from './components/layout/HeaderBackground';
 import PropTypes from 'prop-types';
 import MosaicContainer from './components/mosaic/MosaicContainer';
+import NewsMosaicContainer from './components/mosaic/NewsAndStoriesMosaic/NewsMosaicContainer';
 import {
   changeHeaderBlue,
   changeHeaderBlack,
@@ -41,12 +42,13 @@ class App extends Component {
 
   render() {
     return (
-      <div style={{}}>
+      <div style={{ height: '3000px' }}>
         <Sidebar />
         <HeaderBackground />
         <Carousel />
         <MosaicContainer />
         <AdsContainer />
+        <NewsMosaicContainer />
         {/* <Trial /> */}
       </div>
     );
