@@ -2,25 +2,27 @@ import React from 'react';
 const NewsMosaicTile = ({ imgUrl, content }) => {
   return (
     <div className='col-md-3'>
-      <div>
-        <img style={{ width: '106%' }} src={imgUrl} />
-      </div>
-      <div
-        className='mosaic-b_tile_content'
-        style={{ padding: '.5em .75em .75em .75em', width: '95%' }}
-      >
-        <p
-          style={{
-            fontSize: '1.25em',
-            color: '#414042',
-            fontWeight: '400',
-            lineHeight: '1.3em'
-          }}
-          class='mosaic__tile__title'
+      <a href='' style={{ textDecoration: 'none' }}>
+        <div>
+          <img style={{ width: '106%' }} src={imgUrl} />
+        </div>
+        <div
+          className='mosaic-b_tile_content'
+          style={{ padding: '.5em .75em .75em .75em', width: '95%' }}
         >
-          {content}
-        </p>
-      </div>
+          <p
+            style={{
+              fontSize: '1.25em',
+              color: '#414042',
+              fontWeight: '400',
+              lineHeight: '1.3em'
+            }}
+            class='mosaic__tile__title'
+          >
+            {content}
+          </p>
+        </div>
+      </a>
     </div>
   );
 };
