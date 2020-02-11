@@ -1,0 +1,35 @@
+.ad_tile {
+  padding: 0 0.5em 0 0.5em;
+  margin-left: 7%;
+  margin-top: 7%;
+  border-top: 1px solid #d9d9d9;
+  width: 85%;
+}
+.ad_inner_tile {
+  margin-top: 3%;
+  margin-left: 2%;
+}
+
+.ad_title_container {
+  display: inline-block;
+  width: 52%;
+}
+
+.ad_title {
+  font-weight: 300;
+  font-size: 3.125em;
+  line-height: 56px;
+  color: #414042;
+}
+
+.ad_img_container {
+  /* float: left; */
+  padding-right: 24px;
+  padding-left: 0;
+}
+
+.ad_content {
+  font-weight: 300;
+  font-size: 18px;
+  color: #414042;
+}
