@@ -67,7 +67,15 @@ export default class NewsMosaicContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      newsAndStoriesList: newsAndStories
+      newsAndStoriesList: newsAndStories,
+      followUs: [
+        'fa fa-facebook-f mosaic__follow-us_item',
+        'fa fa-instagram mosaic__follow-us_item',
+        'fa fa-twitter mosaic__follow-us_item',
+        'fa fa-youtube  mosaic__follow-us_item',
+        'fa fa-linkedin mosaic__follow-us_item',
+        'fa fa-pinterest mosaic__follow-us_item'
+      ]
     };
   }
   render() {
@@ -78,7 +86,11 @@ export default class NewsMosaicContainer extends Component {
           <div className='row'>
             <div className='mosaic-b_heading col-md-6'>News & Stories</div>
             <div className='mosaic__follow-us col-md-6'>
-              <FollowUs />
+              Follow us:
+              {this.state.followUs.map(c => (
+                // console.log(c)
+                <FollowUs c={c} />
+              ))}
             </div>
           </div>
           {/* end of mosaic heading */}

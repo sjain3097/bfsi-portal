@@ -1,27 +1,12 @@
 import React from 'react';
-const FollowUs = () => {
+const FollowUs = c => {
+  console.log(c);
   return (
-    <div>
-      Follow us:
+    <span>
       <a href=''>
-        <i class='fa fa-facebook-f mosaic__follow-us_item'></i>
+        <i className={c.c}></i>
       </a>
-      <a href=''>
-        <i class='fa fa-instagram mosaic__follow-us_item'></i>
-      </a>
-      <a href=''>
-        <i class='fa fa-twitter mosaic__follow-us_item'></i>
-      </a>
-      <a href=''>
-        <i class='fa fa-youtube  mosaic__follow-us_item'></i>
-      </a>
-      <a href=''>
-        <i class='fa fa-linkedin mosaic__follow-us_item'></i>
-      </a>
-      <a href=''>
-        <i class='fa fa-pinterest mosaic__follow-us_item'></i>
-      </a>
-    </div>
+    </span>
   );
 };
 

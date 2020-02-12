@@ -15,6 +15,7 @@ import {
 } from './actions/HeaderActions';
 import { connect } from 'react-redux';
 import AdsContainer from './components/Ads/AdsContainer';
+import FooterContainer from './components/layout/footer/FooterContainer';
 // import Trial from './components/transitions/trial';
 class App extends Component {
   state = { headerColor: 'rgba(0, 0, 0, 0.7)' };
@@ -49,6 +50,7 @@ class App extends Component {
         <MosaicContainer />
         <AdsContainer />
         <NewsMosaicContainer />
+        <FooterContainer />
         {/* <Trial /> */}
       </div>
     );
