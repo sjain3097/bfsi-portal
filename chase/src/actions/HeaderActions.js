@@ -95,13 +95,13 @@ export const animateTitle = scroll_y => dispatch => {
   } else if (scroll_y >= 170 && scroll_y < 190) {
     return dispatch({
       type: CHANGE_TITLE_MARGIN,
-      titleMargin: '90%',
+      titleMargin: '100%',
       titleOpacity: '0.4'
     });
   } else {
     return dispatch({
       type: CHANGE_TITLE_MARGIN,
-      titleMargin: '120%',
+      titleMargin: '100%',
       titleOpacity: '0.4'
     });
   }

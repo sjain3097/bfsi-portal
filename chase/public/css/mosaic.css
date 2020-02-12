@@ -13,6 +13,42 @@
   width: 100%;
   height: auto;
 }
+
+/* Mosaic-b */
+.mosaic-b {
+  margin-top: 10%;
+  background-color: #f3f0e9;
+}
+.mosaic-b__container {
+  margin: 0 auto;
+  max-width: 75em;
+}
+.mosaic-b_heading {
+  font-size: 50px;
+  font-weight: 300;
+}
+.mosaic__follow-us {
+  font-size: 24px;
+  text-align: right;
+  padding-top: 1.5%;
+}
+.mosaic__follow-us_item {
+  padding: 6px;
+  color: black;
+}
+.mosaic__follow-us_item:hover {
+  padding: 6px;
+  font-size: 26px;
+  color: #126bc5;
+}
+.mosaic-b_cta {
+  padding: 0 8px 32px 8px;
+}
+.mosaic-b_caret_link {
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: 600;
+}
 /* Ipad media queries */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .mosaic_container {

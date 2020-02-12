@@ -3,32 +3,15 @@ import Sidebar from './Sidebar';
 import { connect } from 'react-redux';
 import { openNav } from '../../actions/SidebarActions';
 import PropTypes from 'prop-types';
-import { ReactComponent as MoneyCheck } from '../../svgs/money-check.svg';
-import { ReactComponent as PiggyBank } from '../../svgs/piggy-bank.svg';
-import { ReactComponent as Car } from '../../svgs/car-side.svg';
-import { ReactComponent as Wallet } from '../../svgs/wallet.svg';
-import { ReactComponent as Home } from '../../svgs/home.svg';
-import { ReactComponent as Briefcase } from '../../svgs/briefcase.svg';
-import { ReactComponent as City } from '../../svgs/city.svg';
-import { ReactComponent as More } from '../../svgs/more.svg';
-import { ReactComponent as CreditCard } from '../../svgs/credit-card.svg';
-import HeaderDropDown from './HeaderDropDown';
 import {
   showHeaderDropDown,
   hideHeaderDropDown
 } from '../../actions/HeaderActions';
 class Header extends Component {
   state = {
-    // headerDropDown: 'd_block_drop_down',
     headerColor: this.props.color
   };
 
-  // hideHeaderDropDown = e => {
-  //   this.setState({ headerDropDown: 'd_block_drop_down' });
-  // };
-  // showHeaderDropDown = e => {
-  //   this.setState({ headerDropDown: '' });
-  // };
   render() {
     return (
       // background image at the start
@@ -59,7 +42,7 @@ class Header extends Component {
                   onMouseOver={this.props.showHeaderDropDown}
                   onMouseOut={this.props.hideHeaderDropDown}
                 >
-                  <a className='track_link' href=''>
+                  <a className='track_link' href='#'>
                     Open an account<i class='fa fa-chevron-down'></i>
                   </a>
                 </div>
