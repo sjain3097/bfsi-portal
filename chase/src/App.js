@@ -43,7 +43,7 @@ class App extends Component {
 
   render() {
     return (
-      <div style={{ height: '3000px' }}>
+      <div style={{ height: '5000px' }}>
         <Sidebar />
         <HeaderBackground />
         <Carousel />

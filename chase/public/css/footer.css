@@ -54,3 +54,17 @@
   font-size: 0.85em;
   line-height: 20px;
 }
+.heading {
+  /* background-color: yellow; */
+  display: inline-block;
+  font-size: 0.895em;
+  vertical-align: bottom;
+  margin-bottom: 0.2em;
+}
+.footer-section-tile--footer--link-container {
+  display: inline;
+  padding: 0.417em;
+}
+.footer-section-tile--footer--link {
+  text-decoration: underline;
+}
