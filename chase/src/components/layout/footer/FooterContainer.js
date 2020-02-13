@@ -33,7 +33,7 @@ export default class FooterContainer extends Component {
           </div>
           {/* end of Follow us section */}
           {/* start of footer header section */}
-          <div style={{ backgroundColor: '#F3F0E9' }}>
+          <div style={{ backgroundColor: '#f7f7f7' }}>
             <div className=' footer_section'>
               <div className='footer--header'>
                 <p class='footer--header--text'>
