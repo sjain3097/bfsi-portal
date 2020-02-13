@@ -2,14 +2,17 @@
   text-align: center;
   margin: 0 auto;
   max-width: 75em;
-  border-top: 1px solid #cccccc;
+  /* border-top: 1px solid #cccccc; */
 }
 .footer_follow-us {
+  /* max-width: 75em; */
   font-size: 24px;
   color: #717171;
   height: 9%;
   padding: 20px 0 0 0;
-  margin-bottom: 1.25em;
+  margin: 0 9%;
+  border-top: 1px solid #cccccc;
+  /* margin-bottom: 1.25em; */
 }
 .footer_follow-us_item {
   font-size: 34px;
@@ -30,6 +33,9 @@
   line-height: 1.333em;
   color: #414042;
   padding: 0 1em;
+}
+.footer--tiles {
+  padding: 1em 0 1.25em 0.625em;
 }
 .footer--tile {
   padding: 0 1.25em 0.625em 1.25em;
