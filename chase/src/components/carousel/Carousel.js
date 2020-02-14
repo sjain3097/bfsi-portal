@@ -13,9 +13,6 @@ import Invest from '../../svgs/invest.svg';
 import SlickDots from './SlickDots';
 import $ from 'jquery';
 const imgUrls = [
-  // { index: 8, icon: Invest, subtitle: 'Invest' },
-  // { index: 7, icon: PrivateClient, subtitle: 'Chase Private Client' },
-  // { index: 6, icon: Briefcase, subtitle: 'Chase for Business' },
   { index: 0, icon: Tachometer, subtitle: 'Free Credit Score' },
   { index: 1, icon: MoneyCheck, subtitle: 'Schedule a meeting' },
   { index: 2, icon: CreditCard, subtitle: 'Find a credit card' },
@@ -25,11 +22,6 @@ const imgUrls = [
   { index: 6, icon: Briefcase, subtitle: 'Chase for Business' },
   { index: 7, icon: PrivateClient, subtitle: 'Chase Private Client' },
   { index: 8, icon: Invest, subtitle: 'Invest' }
-  // { index: 0, icon: Tachometer, subtitle: 'Free Credit Score' },
-  // { index: 1, icon: MoneyCheck, subtitle: 'Schedule a meeting' },
-  // { index: 2, icon: CreditCard, subtitle: 'Find a credit card' },
-  // { index: 3, icon: Home, subtitle: 'Home Lending' }
-  // { index: 0, icon: Tachometer, subtitle: 'Free Credit Score' }
 ];
 class Carousel extends Component {
   constructor(props) {
@@ -77,14 +69,14 @@ class Carousel extends Component {
   };
 
   render() {
-    const { card, cards, current, first, second, third, fourth } = this.state;
+    const { card, cards } = this.state;
     return (
       <div className='container-fluid'>
         <div className='carousel__heading--container'>
           <div className='carousel__heading'>Choose what's right for you</div>
         </div>
         <div className='carousel__container'>
-          <div className='slide_arrow--left d-xs-block'>
+          <div className='slide_arrow--left d-arrow-block'>
             <Arrow
               direction='left'
               clickFunction={this.previousSlide}
@@ -109,7 +101,7 @@ class Carousel extends Component {
               ))}
             </div>
           </div>
-          <div className='slide_arrow--right d-xs-block'>
+          <div className='slide_arrow--right d-arrow-block'>
             <Arrow
               direction='right'
               clickFunction={this.nextSlide}

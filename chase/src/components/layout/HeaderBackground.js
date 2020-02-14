@@ -8,7 +8,8 @@ import HeaderDropDown from './HeaderDropDown';
 class HeaderBackground extends Component {
   render() {
     return (
-      <div className='backgroung-img '>
+      // <div className='sanfran-highcontrast backgroung-img'>
+      <div classname='backgroung-img border '>
         <Header color={this.props.headerColor} />
         {/* <div style={{ height: '70px' }}></div> */}
         <HeaderDropDown />

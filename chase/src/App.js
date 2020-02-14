@@ -46,11 +46,11 @@ class App extends Component {
       <div style={{ height: '5000px' }}>
         <Sidebar />
         <HeaderBackground />
-        <Carousel />
-        <MosaicContainer />
+        {/* <Carousel /> */}
+        {/* <MosaicContainer />
         <AdsContainer />
         <NewsMosaicContainer />
-        <FooterContainer />
+        <FooterContainer /> */}
         {/* <Trial /> */}
       </div>
     );

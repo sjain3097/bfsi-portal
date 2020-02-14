@@ -75,30 +75,39 @@ class Header extends Component {
 
             {/* right header block */}
             <div className='col-3 col-md-4 '>
-              <div className='row'>
-                <div className='col-md-4 d-s-block d-xs-block'>
-                  <a className='track_link' href=''>
-                    ATM & branch
-                  </a>
-                </div>
-                <div className='col-md-3 d-s-block d-xs-block'>
-                  <a className='track_link' href=''>
-                    Español
-                  </a>
-                </div>
-                <div className='column-ipad '>
-                  <a className='sign_in button' href=''>
-                    Sign in
-                  </a>
-                </div>
-                <div className='col-md-2 d-xs-block'>
-                  <a href=''>
-                    <i
-                      className='fa fa-search fa-lg'
-                      aria-hidden='true'
-                      style={{ color: 'white' }}
-                    ></i>
-                  </a>
+              <div
+                style={{
+                  // float: 'right',
+                  display: 'inline-block',
+                  width: '100%',
+                  textAlign: 'right'
+                }}
+              >
+                <div className='row'>
+                  <div className='col-md-4 d-s-block d-xs-block'>
+                    <a className='track_link' href=''>
+                      ATM & branch
+                    </a>
+                  </div>
+                  <div className='col-md-3 d-s-block d-xs-block'>
+                    <a className='track_link' href=''>
+                      Español
+                    </a>
+                  </div>
+                  <div className='column-ipad '>
+                    <a className='sign_in button' href=''>
+                      Sign in
+                    </a>
+                  </div>
+                  <div className='col-md-2 d-xs-block'>
+                    <a href=''>
+                      <i
+                        className='fa fa-search fa-lg'
+                        aria-hidden='true'
+                        style={{ color: 'white' }}
+                      ></i>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

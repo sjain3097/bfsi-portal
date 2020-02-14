@@ -1,3 +1,11 @@
+.sanfran-highcontrast {
+  background-image: url('https://sites.chase.com/content/services/structured-image/image.mobile-portrait.jpg/XCRT/Flexible-Templates/Hero/2018/54448_IC19-39_Dig_Acq_Offer_Updates_200_Hero_Background_2560x1440.jpg');
+}
+
+.lt-ie9 .sanfran-highcontrast {
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://sites.chase.com/content/services/structured-image/image.desktop.jpg/XCRT/Flexible-Templates/Hero/2018/54448_IC19-39_Dig_Acq_Offer_Updates_200_Hero_Background_2560x1440.jpg', sizingMethod='scale');
+}
+
 .d-md-block {
   display: none;
 }
@@ -25,7 +33,7 @@
   width: 27%;
 }
 .column-ipad {
-  width: 20.33%;
+  width: 23.33%;
 }
 .track_link {
   color: white;
@@ -71,7 +79,7 @@
 }
 /* header background */
 .backgroung-img {
-  background-image: url('../header-back.jpg');
+  /* background-image: url('../header-back.jpg'); */
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #cccccc;
@@ -180,30 +188,42 @@
   background-color: #002db3c9;
 }
 
+@media only screen and (min-width: 1400px) {
+  .column-ipad {
+    width: 24.66%;
+  }
+}
+@media only screen and (min-width: 780px) {
+  .logo {
+    margin-left: -12%;
+    width: 40%;
+  }
+}
 /* Ipad media queries */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+/* @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) { */
+@media only screen and (min-width: 980px) {
   /* .d-s-block {
     display: none;
   } */
-  .column-ipad {
+  /* .column-ipad {
     width: 66.66%;
-  }
+  } */
   .title {
     text-align: right;
     /* overflow: hidden; */
     /* width: 55%; */
   }
   .chase_text {
-    width: 100%;
+    width: 70%;
     /* margin-right: -12%; */
   }
   .logo {
-    width: 55%;
-    margin-left: -25%;
+    width: 39%;
+    /* margin-left: -25%; */
   }
-  .sign_in {
+  /* .sign_in {
     margin-left: 40%;
-  }
+  } */
   .header_inner {
     width: 90%;
     height: 60%;
@@ -229,12 +249,12 @@
 /* @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) { */
 @media only screen and (max-width: 760px) {
   .backgroung-img {
-    background-image: url('../header-back.jpg');
+    /* background-image: url('../header-back.jpg'); */
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #cccccc;
     /* height: 375px; */
-    width: 690px;
+    /* width: 690px; */
     z-index: 2;
   }
   .d-xs-block {
@@ -259,9 +279,9 @@
     width: 200%;
     margin-left: -70%;
   }
-  .sign_in {
+  /* .sign_in {
     margin-right: 15%;
-  }
+  } */
   .button {
     font-size: 26px;
     border: none;
@@ -296,9 +316,45 @@
   .d-s-block {
     display: none;
   }
+  .column-ipad {
+    width: 66.66%;
+  }
 }
 /* @media only screen and (max-width: 768px) {
   .d-xs-block {
     display: none;
   }
 } */
+@media only screen and (min-width: 480px) {
+  .sanfran-highcontrast {
+    background-image: url('https://sites.chase.com/content/services/structured-image/image.mobile-portrait.jpg/XCRT/Flexible-Templates/Hero/2018/54448_IC19-39_Dig_Acq_Offer_Updates_200_Hero_Background_2560x1440.jpg');
+  }
+  .backgroung-img {
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    background-color: #cccccc;
+    /* height: 375px; */
+    max-width: 100%;
+    z-index: 2;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .sanfran-highcontrast {
+    background-image: url('https://sites.chase.com/content/services/structured-image/image.mobile-landscape.jpg/XCRT/Flexible-Templates/Hero/2018/54448_IC19-39_Dig_Acq_Offer_Updates_200_Hero_Background_2560x1440.jpg');
+  }
+}
+@media only screen and (min-width: 992px) {
+  .sanfran-highcontrast {
+    background-image: url('https://sites.chase.com/content/services/structured-image/image.tablet.jpg/XCRT/Flexible-Templates/Hero/2018/54448_IC19-39_Dig_Acq_Offer_Updates_200_Hero_Background_2560x1440.jpg');
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .sanfran-highcontrast {
+    background-image: url('https://sites.chase.com/content/services/structured-image/image.desktop.jpg/XCRT/Flexible-Templates/Hero/2018/54448_IC19-39_Dig_Acq_Offer_Updates_200_Hero_Background_2560x1440.jpg');
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .sanfran-highcontrast {
+    background-image: url('https://sites.chase.com/content/services/structured-image/image.retina.jpg/XCRT/Flexible-Templates/Hero/2018/54448_IC19-39_Dig_Acq_Offer_Updates_200_Hero_Background_2560x1440.jpg');
+  }
+}
