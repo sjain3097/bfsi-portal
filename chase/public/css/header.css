@@ -7,9 +7,13 @@
 
   height: 10%;
 }
+.header ul {
+  margin-top: 3%;
+}
 .header li {
   color: white;
   text-align: right;
+  vertical-align: bottom;
   padding: 0 0 0 0;
 }
 .button {

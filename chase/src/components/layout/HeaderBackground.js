@@ -25,12 +25,12 @@ export default class HeaderBackground extends Component {
               width: '90%'
             }}
           >
-            <div className='row border'>
+            <div className='row '>
               {/* Right block */}
               <div className='col-2 col-sm-2 col-md-4 '>
                 <nav>
                   <ul className='row '>
-                    <li className='col-12 col-sm-5 col-md-3 border'>
+                    <li className='col-12 col-sm-5 col-md-3 '>
                       <a className='btn'>
                         <i
                           className='fa fa-bars fa-2x '
@@ -65,8 +65,8 @@ export default class HeaderBackground extends Component {
                       <img
                         className=''
                         style={{
-                          width: '60px',
-                          height: '60px',
+                          width: '50px',
+                          height: '50px',
                           marginTop: '-4%',
                           float: 'left'
                         }}
@@ -82,22 +82,22 @@ export default class HeaderBackground extends Component {
                 {/* <div className='row' style={{ float: 'right' }}> */}
                 <nav className=''>
                   <ul className='row justify-content-end'>
-                    <li className='col-md-4 d-m-block border'>
+                    <li className='col-md-4 d-m-block '>
                       <a style={link} href=''>
                         ATM & Branch
                       </a>
                     </li>
-                    <li className='col-md-2 d-m-block border'>
+                    <li className='col-md-2 d-m-block '>
                       <a style={link} href=''>
                         Español
                       </a>
                     </li>
-                    <li className='col-12 col-sm-7 col-md-4 border '>
+                    <li className='col-12 col-sm-7 col-md-4  '>
                       <a className='sign_in button' href=''>
                         Sign in
                       </a>
                     </li>
-                    <li className='col-2 col-sm-2 col-md-2 d-s-block border'>
+                    <li className='col-2 col-sm-2 col-md-2 d-s-block '>
                       <a style={link} href=''>
                         <i
                           className='fa fa-search fa-lg'
