@@ -17,8 +17,7 @@ class Header extends Component {
       // background image at the start
       <header>
         <div
-          className='container-fluid'
-          className='header'
+          className='container-fluid header'
           style={{
             'background-color': this.props.color
           }}
