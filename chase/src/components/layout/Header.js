@@ -15,104 +15,131 @@ class Header extends Component {
   render() {
     return (
       // background image at the start
-      <header>
-        <div
-          className='container-fluid header'
+      <div>
+        <header
+          className='header'
           style={{
-            'background-color': this.props.color
+            backgroundColor: this.props.headerColor
           }}
         >
-          {/* left header block */}
-          <div className='row'>
-            <div className=' col-4 col-md-4 '>
-              <div className='row'>
-                <div className='col-6 col-md-4 '>
-                  <a className='btn'>
-                    <i
-                      className='fa fa-bars fa-2x '
-                      aria-hidden='true'
-                      onClick={this.props.openNav}
-                      style={{ color: 'white' }}
-                    ></i>
-                  </a>
-                </div>
-                <div
-                  className='col-md-8 d-s-block d-xs-block'
-                  onMouseOver={this.props.showHeaderDropDown}
-                  onMouseOut={this.props.hideHeaderDropDown}
-                >
-                  <a className='track_link' href='#'>
-                    Open an account<i class='fa fa-chevron-down'></i>
-                  </a>
-                </div>
+          <div
+            className=' '
+            style={{
+              margin: 'auto',
+              width: '93%',
+              marginTop: '10px'
+            }}
+          >
+            <div className='row ' style={{ height: '65px' }}>
+              {/* Right block */}
+              <div className='col-2 col-sm-2 col-md-4 '>
+                <nav>
+                  <ul className='row '>
+                    <li className='col-12 col-sm-5 col-md-3 ' id='bars'>
+                      <a className='btn'>
+                        <i
+                          className='fa fa-bars fa-2x header--link'
+                          aria-hidden='true'
+                          onClick={this.props.openNav}
+                          // style={link}
+                        ></i>
+                      </a>
+                    </li>
+                    <li
+                      className='col-md-6  d-m-block  header--link'
+                      onMouseOver={this.props.showHeaderDropDown}
+                      onMouseOut={this.props.hideHeaderDropDown}
+                    >
+                      <a className='header--link' href=''>
+                        Open an account<i class='fa fa-chevron-down'></i>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
               </div>
-            </div>
-
-            {/* CENTER HEADER BLOCK */}
-            <div className='col-5 col-md-4 '>
-              <div className='row'>
-                <div className='col-7 col-md-7 ' style={{ textAlign: 'right' }}>
-                  <div
-                    className='title'
-                    style={{
-                      'margin-left': this.props.titleMargin,
-                      opacity: this.props.titleOpacity
-                    }}
-                  >
-                    <img className='chase_text' src='chase_text_white.png' />
-                  </div>
-                </div>
-                <div className='col-2 col-md-5 '>
-                  <span className='logo-container'>
-                    <a href='index.html'>
-                      <img className='logo' src='hexa_white.png' />
-                    </a>
-                  </span>
-                </div>
+              {/* Center block */}
+              <div className='col-6 col-sm-6 col-md-4 '>
+                <ul id='branding' className='row'>
+                  <li className='col-10 col-sm-9 col-md-7 '>
+                    <div className='title '>
+                      <div
+                        style={
+                          {
+                            // position: 'absolute',
+                            // width: this.props.titleMargin,
+                            // opacity: this.props.titleOpacity
+                          }
+                        }
+                      >
+                        <img
+                          className='chase_text'
+                          style={{
+                            'margin-left': this.props.titleMargin,
+                            opacity: this.props.titleOpacity
+                          }}
+                          src='chase_text_white.png'
+                        />
+                      </div>
+                    </div>
+                  </li>
+                  <li className='col-2 col-sm-2 col-md-2 '>
+                    <div
+                      className=''
+                      style={{
+                        height: '50px',
+                        width: '50px'
+                      }}
+                    >
+                      <img
+                        className=''
+                        style={{
+                          width: '50px',
+                          height: '50px',
+                          marginTop: '-4%',
+                          float: 'left'
+                        }}
+                        src='hexa_white.png'
+                      />
+                    </div>
+                  </li>
+                </ul>
               </div>
-            </div>
-
-            {/* right header block */}
-            <div className='col-3 col-md-4 '>
-              <div
-                style={{
-                  // float: 'right',
-                  display: 'inline-block',
-                  width: '100%',
-                  textAlign: 'right'
-                }}
-              >
-                <div className='row'>
-                  <div className='col-md-4 d-s-block d-xs-block'>
-                    <a className='track_link' href=''>
-                      ATM & branch
-                    </a>
-                  </div>
-                  <div className='col-md-3 d-s-block d-xs-block'>
-                    <a className='track_link' href=''>
-                      Español
-                    </a>
-                  </div>
-                  <div className='column-ipad '>
-                    <a className='sign_in button' href=''>
-                      Sign in
-                    </a>
-                  </div>
-                  <div className='col-md-2 d-xs-block'>
-                    <a href=''>
-                      <i
-                        className='fa fa-search fa-lg'
-                        aria-hidden='true'
-                        style={{ color: 'white' }}
-                      ></i>
-                    </a>
-                  </div>
-                </div>
+              {/* Left block */}
+              <div className='col-4 col-sm-4 col-md-4 '>
+                {/* <div className='row' style={{ float: 'right' }}> */}
+                <nav className=''>
+                  <ul className='row justify-content-end'>
+                    <li className='col-md-4 d-m-block header--link'>
+                      <a className='header--link' href=''>
+                        ATM & Branch
+                      </a>
+                    </li>
+                    <li className='col-md-3 d-m-block header--link'>
+                      <a className='header--link' href=''>
+                        Español
+                      </a>
+                    </li>
+                    <li className='col-12 col-sm-7 col-md-3  '>
+                      <a className='sign_in button' href=''>
+                        Sign in
+                      </a>
+                    </li>
+                    <li className='col-2 col-sm-2 col-md-2 d-s-block header--link'>
+                      <a className='header--link' href=''>
+                        <i
+                          className='fa fa-search fa-lg'
+                          aria-hidden='true'
+                          // className='header--link'
+                        ></i>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
               </div>
             </div>
           </div>
-        </div>
-      </header>
+        </header>
+      </div>
     );
   }
 }
@@ -121,6 +148,7 @@ Header.propTypes = {
 };
 const mapStateToProps = state => {
   return {
+    headerColor: state.header.headerColor,
     titleMargin: state.header.titleMargin,
     titleOpacity: state.header.titleOpacity
   };

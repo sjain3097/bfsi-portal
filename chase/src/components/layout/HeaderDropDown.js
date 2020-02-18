@@ -26,11 +26,11 @@ class HeaderDropDown extends Component {
         style={{
           overflow: 'hidden',
           height: this.props.headerDropDownHeight,
-          //height: '200px',
+          // height: '200px',
           'background-color': this.props.headerColor,
           //transition: 'background-color 1s ',
           position: 'fixed',
-          top: '70px',
+          top: '75px',
           'z-index': '100',
           transition: '0.5s'
         }}

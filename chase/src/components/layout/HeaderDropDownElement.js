@@ -7,13 +7,14 @@ const HeaderDropDownElement = ({
   headerDropDownElementHeight = '0%'
 }) => (
   <span
+    className='drop-down-element'
     style={{
       overflow: 'hidden',
       height: headerDropDownElementHeight,
       transition: '2s'
     }}
   >
-    <a href={'link'} className='track__link'>
+    <a href={'link'} className='header--link'>
       <p
         className='col '
         style={{
@@ -26,7 +27,7 @@ const HeaderDropDownElement = ({
         <Icon style={{ transform: 'scale(0.4)' }} />
       </p>
 
-      <p className='drop_down_link'>{subTitle}</p>
+      <p>{subTitle}</p>
     </a>
   </span>
 );
