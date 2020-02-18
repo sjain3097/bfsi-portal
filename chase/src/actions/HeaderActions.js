@@ -64,49 +64,49 @@ export const animateTitle = scroll_y => dispatch => {
       type: CHANGE_TITLE_MARGIN,
       titleMargin: '30%',
       titleOpacity: '0.4',
-      logoShift: '32px'
+      logoShift: '35px'
     });
   } else if (scroll_y >= 70 && scroll_y < 90) {
     return dispatch({
       type: CHANGE_TITLE_MARGIN,
       titleMargin: '40%',
       titleOpacity: '0.4',
-      logoShift: '25px'
+      logoShift: '30px'
     });
   } else if (scroll_y >= 90 && scroll_y < 110) {
     return dispatch({
       type: CHANGE_TITLE_MARGIN,
       titleMargin: '50%',
       titleOpacity: '0.4',
-      logoShift: '20px'
+      logoShift: '25px'
     });
   } else if (scroll_y >= 110 && scroll_y < 130) {
     return dispatch({
       type: CHANGE_TITLE_MARGIN,
       titleMargin: '60%',
       titleOpacity: '0.4',
-      logoShift: '10px'
+      logoShift: '20px'
     });
   } else if (scroll_y >= 130 && scroll_y < 150) {
     return dispatch({
       type: CHANGE_TITLE_MARGIN,
       titleMargin: '70%',
       titleOpacity: '0.4',
-      logoShift: '5px'
+      logoShift: '15px'
     });
   } else if (scroll_y >= 150 && scroll_y < 170) {
     return dispatch({
       type: CHANGE_TITLE_MARGIN,
       titleMargin: '80%',
       titleOpacity: '0.4',
-      logoShift: '3px'
+      logoShift: '10px'
     });
   } else if (scroll_y >= 170 && scroll_y < 190) {
     return dispatch({
       type: CHANGE_TITLE_MARGIN,
       titleMargin: '100%',
       titleOpacity: '0.4',
-      logoShift: '0px'
+      logoShift: '5px'
     });
   } else {
     return dispatch({
