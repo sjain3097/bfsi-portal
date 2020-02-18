@@ -59,50 +59,51 @@ class Header extends Component {
               </div>
               {/* Center block */}
               <div className='col-6 col-sm-6 col-md-4 '>
-                <ul id='branding' className='row'>
-                  <li className='col-10 col-sm-9 col-md-7 '>
-                    <div className='title '>
-                      <div
-                        style={
-                          {
-                            // position: 'absolute',
-                            // width: this.props.titleMargin,
-                            // opacity: this.props.titleOpacity
-                          }
-                        }
-                      >
-                        <img
-                          className='chase_text'
-                          style={{
-                            'margin-left': this.props.titleMargin,
-                            opacity: this.props.titleOpacity
-                          }}
-                          src='chase_text_white.png'
-                        />
-                      </div>
-                    </div>
-                  </li>
-                  <li className='col-2 col-sm-2 col-md-2 '>
+                <div
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'center'
+                  }}
+                >
+                  <div className='' style={{ position: 'relative' }}>
                     <div
                       className=''
                       style={{
-                        height: '50px',
-                        width: '50px'
+                        position: 'absolute',
+                        overflowX: 'hidden',
+                        right: '-53px'
+                      }}
+                    >
+                      <img
+                        className='chase_text'
+                        style={{
+                          'margin-left': this.props.titleMargin,
+                          opacity: this.props.titleOpacity
+                        }}
+                        src='chase_text_white.png'
+                      />
+                    </div>
+                  </div>
+                  <div style={{ position: 'relative' }}>
+                    <div
+                      className=' '
+                      style={{
+                        position: 'absolute',
+                        left: this.props.logoShift
                       }}
                     >
                       <img
                         className=''
                         style={{
-                          width: '50px',
                           height: '50px',
-                          marginTop: '-4%',
-                          float: 'left'
+                          width: '50px',
+                          marginTop: '-3%'
                         }}
                         src='hexa_white.png'
                       />
                     </div>
-                  </li>
-                </ul>
+                  </div>
+                </div>
               </div>
               {/* Left block */}
               <div className='col-4 col-sm-4 col-md-4 '>
@@ -150,7 +151,8 @@ const mapStateToProps = state => {
   return {
     headerColor: state.header.headerColor,
     titleMargin: state.header.titleMargin,
-    titleOpacity: state.header.titleOpacity
+    titleOpacity: state.header.titleOpacity,
+    logoShift: state.header.logoShift
   };
 };
 export default connect(mapStateToProps, {

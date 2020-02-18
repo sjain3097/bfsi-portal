@@ -10,6 +10,7 @@ const initialState = {
   headerDropDownHeight: '0%',
   headerDropDownElementHeight: '0%',
   titleMargin: '0%',
+  logoShift: '53px',
   titleOpacity: '1'
 };
 export default function(state = initialState, action) {
@@ -32,7 +33,8 @@ export default function(state = initialState, action) {
       return {
         ...state,
         titleMargin: action.titleMargin,
-        titleOpacity: action.titleOpacity
+        titleOpacity: action.titleOpacity,
+        logoShift: action.logoShift
       };
     default:
       return state;
