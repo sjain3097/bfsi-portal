@@ -58,7 +58,7 @@ class Header extends Component {
                 </nav>
               </div>
               {/* Center block */}
-              <div className='col-6 col-sm-6 col-md-4 '>
+              <div className='col-7 col-sm-6 col-md-4 '>
                 <div
                   style={{
                     display: 'flex',
@@ -106,7 +106,7 @@ class Header extends Component {
                 </div>
               </div>
               {/* Left block */}
-              <div className='col-4 col-sm-4 col-md-4 '>
+              <div className='col-3 col-sm-4 col-md-4 '>
                 {/* <div className='row' style={{ float: 'right' }}> */}
                 <nav className=''>
                   <ul className='row justify-content-end'>

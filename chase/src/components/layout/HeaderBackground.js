@@ -13,19 +13,25 @@ export default class HeaderBackground extends Component {
             <div className='container'>
               <div class='grid-container'>
                 <div class='item1'>
-                  <img src='200.png' />
+                  <img style={{}} src='200.png' />
                 </div>
                 <div class='item2'>
-                  <h1>New Chase customers:</h1>
+                  <p>New Chase customers:</p>
                 </div>
                 <div class='item3'>
-                  <p>
+                  <p
+                  // style={{
+                  //   'font-weight': '400',
+                  //   'font-size': '12px',
+                  //   'line-height': '1.3em'
+                  // }}
+                  >
                     Open a Chase Total Checking® and Chase Savings℠ account with
                     qualifying activities.
                   </p>
                 </div>
-                <div class='item4'>
-                  <p className='col'>
+                <div class='item4 '>
+                  <p className=''>
                     <a className='open_acc_button' href=''>
                       Open an account{' '}
                     </a>
