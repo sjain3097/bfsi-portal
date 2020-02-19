@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import ImageSlide from './ImageSlide';
 import Arrow from './Arrow';
+import ImageSlide from './ImageSlide';
 import MoneyCheck from '../../svgs/money-check.svg';
 import PiggyBank from '../../svgs/piggy-bank.svg';
 import Car from '../../svgs/car-side.svg';
@@ -10,110 +10,123 @@ import CreditCard from '../../svgs/credit-card.svg';
 import Tachometer from '../../svgs/tachometer.svg';
 import PrivateClient from '../../svgs/private-clients.svg';
 import Invest from '../../svgs/invest.svg';
-import SlickDots from './SlickDots';
-import $ from 'jquery';
-const imgUrls = [
-  { index: 0, icon: Tachometer, subtitle: 'Free Credit Score' },
-  { index: 1, icon: MoneyCheck, subtitle: 'Schedule a meeting' },
-  { index: 2, icon: CreditCard, subtitle: 'Find a credit card' },
-  { index: 3, icon: Home, subtitle: 'Home Lending' },
-  { index: 4, icon: Car, subtitle: 'Car Buying & Loans' },
-  { index: 5, icon: PiggyBank, subtitle: 'Savings Accounts & CDs' },
-  { index: 6, icon: Briefcase, subtitle: 'Chase for Business' },
-  { index: 7, icon: PrivateClient, subtitle: 'Chase Private Client' },
-  { index: 8, icon: Invest, subtitle: 'Invest' }
-];
-class Carousel extends Component {
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+export default class Carousel extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      cards: imgUrls,
-      card: imgUrls[0],
-      transition: 0
+      items: [
+        { icon: Tachometer, subtitle: 'Free Credit Score' },
+        { icon: CreditCard, subtitle: 'Find a credit card' },
+        { icon: Home, subtitle: 'Home Lending' },
+        { icon: Car, subtitle: 'Car Buying & Loans' },
+        { icon: PiggyBank, subtitle: 'Savings Accounts & CDs' },
+        { icon: Briefcase, subtitle: 'Chase for Business' },
+        { icon: PrivateClient, subtitle: 'Chase Private Client' },
+        { icon: Invest, subtitle: 'Invest' },
+        { icon: MoneyCheck, subtitle: 'Schedule a meeting' },
+        { icon: Tachometer, subtitle: 'Free Credit Score' },
+        { icon: CreditCard, subtitle: 'Find a credit card' },
+        { icon: Home, subtitle: 'Home Lending' },
+        { icon: Car, subtitle: 'Car Buying & Loans' },
+        { icon: PiggyBank, subtitle: 'Savings Accounts & CDs' },
+        { icon: Briefcase, subtitle: 'Chase for Business' },
+        { icon: PrivateClient, subtitle: 'Chase Private Client' },
+        { icon: Invest, subtitle: 'Invest' },
+        { icon: MoneyCheck, subtitle: 'Schedule a meeting' }
+      ],
+      active: this.props.active,
+      direction: '',
+      transitionX: 0
     };
   }
-
-  componentDidUpdate() {}
-  //working
-  previousSlide = () => {
-    console.log(this.state.card);
-    const oldIndex = this.state.card.index;
-    if (oldIndex != 0) {
-      const newIndex = oldIndex - 1;
-      this.setState({
-        card: this.state.cards[newIndex],
-        //cards: cards
-        transition: this.state.transition - 10 - newIndex
-      });
-    } else {
-      this.setState({
-        card: this.state.cards[4]
-      });
+  generateItems = () => {
+    var items = [];
+    var level;
+    console.log(this.state.active);
+    for (var i = this.state.active - 3; i < this.state.active + 4; i++) {
+      var index = i;
+      if (i < 0) {
+        index = this.state.items.length + i;
+      } else if (i >= this.state.items.length) {
+        index = i % this.state.items.length;
+      }
+      level = this.state.active - i;
+      items.push(
+        <ImageSlide
+          key={index}
+          id={i}
+          level={level}
+          Icon={this.state.items[index].icon}
+          subtitle={this.state.items[index].subtitle}
+        />
+      );
     }
+
+    console.log(items);
+    return items;
   };
 
-  nextSlide = () => {
-    const oldIndex = this.state.card.index;
-    if (oldIndex != this.state.cards.length - 5) {
-      const newIndex = oldIndex + 1;
-      this.setState({
-        card: this.state.cards[newIndex],
-        //cards: cards
-        transition: this.state.transition + 10 + newIndex
-      });
-    } else {
-      this.setState({
-        card: this.state.cards[0]
-      });
-    }
+  moveLeft = () => {
+    var newActive = this.state.active;
+    newActive--;
+    this.setState({ transitionX: '-200' });
+    this.setState({
+      active: newActive < 0 ? this.state.items.length - 1 : newActive
+      // direction: 'left',
+    });
+    this.setState({ transitionX: '0' });
   };
 
+  moveRight = () => {
+    var newActive = this.state.active;
+    this.setState({ transitionX: '200' });
+    // this.setState({});
+    setTimeout(() => {
+      this.setState({
+        active: (newActive + 1) % this.state.items.length,
+        direction: 'right',
+        transitionX: '0'
+      });
+    }, 1000);
+  };
   render() {
-    const { card, cards } = this.state;
+    console.log(this.state.transitionX);
     return (
-      <div className='container-fluid'>
-        <div className='carousel__heading--container'>
-          <div className='carousel__heading'>Choose what's right for you</div>
-        </div>
-        <div className='carousel__container'>
-          <div className='slide_arrow--left d-arrow-block'>
+      <div>
+        <div className='carousel-grid'>
+          <div class='carousel-grid-1'>
+            <p>Choose what's right for you</p>
+          </div>
+          <div class='carousel-grid-2'>
             <Arrow
               direction='left'
-              clickFunction={this.previousSlide}
+              clickFunction={this.moveLeft}
               glyph={<i class='fa fa-angle-left'></i>}
             />
           </div>
-          <div className='carousel__outer'>
+
+          <div class='carousel-grid-3'>
             <div
-              className='carousel__inner'
+              id='slide-container'
               style={{
-                transform: `translate3d(-${card.index *
-                  (100 / cards.length)}%, 0px, 0px)`
+                transform: `translate3d(${this.state.transitionX}px, 0px, 0px)`
               }}
             >
-              {this.state.cards.map((card, i) => (
-                <ImageSlide
-                  transition={this.state.transition}
-                  id={`slick-${i}-active`}
-                  Icon={card.icon}
-                  subtitle={card.subtitle}
-                />
-              ))}
+              {/* <ReactCSSTransitionGroup transitionName={this.state.direction}> */}
+              {this.generateItems()}
+              {/* </ReactCSSTransitionGroup> */}
             </div>
           </div>
-          <div className='slide_arrow--right d-arrow-block'>
+          <div class='carousel-grid-4'>
             <Arrow
               direction='right'
-              clickFunction={this.nextSlide}
+              clickFunction={this.moveRight}
               glyph={<i class='fa fa-angle-right'></i>}
-            />
+            />{' '}
           </div>
         </div>
-
-        <SlickDots currentCard={this.state.card.index + 1} />
       </div>
     );
   }
 }
-
-export default Carousel;

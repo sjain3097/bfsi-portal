@@ -8,6 +8,7 @@ import HeaderBackground from './components/layout/HeaderBackground';
 import PropTypes from 'prop-types';
 import MosaicContainer from './components/mosaic/MosaicContainer';
 import NewsMosaicContainer from './components/mosaic/NewsAndStoriesMosaic/NewsMosaicContainer';
+// import './carousel.scss';
 import {
   changeHeaderBlue,
   changeHeaderBlack,
@@ -42,11 +43,14 @@ class App extends Component {
   };
 
   render() {
+    // var items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     return (
       <div style={{ height: '5000px' }}>
         <Sidebar />
         <HeaderBackground />
-        <Carousel />
+        {/* <Carousel items={items} active={0} />, */}
+        <Carousel active={0} />
+        />
         {/* <MosaicContainer />
         <AdsContainer />
         <NewsMosaicContainer />
