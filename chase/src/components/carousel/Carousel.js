@@ -11,6 +11,7 @@ import Tachometer from '../../svgs/tachometer.svg';
 import PrivateClient from '../../svgs/private-clients.svg';
 import Invest from '../../svgs/invest.svg';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import '../../';
 export default class Carousel extends Component {
   constructor(props) {
     super(props);
@@ -80,15 +81,20 @@ export default class Carousel extends Component {
 
   moveRight = () => {
     var newActive = this.state.active;
-    this.setState({ transitionX: '200' });
+    this.setState({ transitionX: this.state.transitionX - 200 });
     // this.setState({});
+    // this.setState({
+    //   active: (newActive + 1) % this.state.items.length,
+    //   direction: 'right',
+    //   transitionX: '0'
+    // });
     setTimeout(() => {
       this.setState({
         active: (newActive + 1) % this.state.items.length,
-        direction: 'right',
-        transitionX: '0'
+        direction: 'right'
+        // transitionX: '0'
       });
-    }, 1000);
+    }, 300);
   };
   render() {
     console.log(this.state.transitionX);
@@ -109,9 +115,11 @@ export default class Carousel extends Component {
           <div class='carousel-grid-3'>
             <div
               id='slide-container'
-              style={{
-                transform: `translate3d(${this.state.transitionX}px, 0px, 0px)`
-              }}
+              style={
+                {
+                  // transform: `translate3d(${this.state.transitionX}px, 0px, 0px)`
+                }
+              }
             >
               {/* <ReactCSSTransitionGroup transitionName={this.state.direction}> */}
               {this.generateItems()}

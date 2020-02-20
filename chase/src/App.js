@@ -8,7 +8,7 @@ import HeaderBackground from './components/layout/HeaderBackground';
 import PropTypes from 'prop-types';
 import MosaicContainer from './components/mosaic/MosaicContainer';
 import NewsMosaicContainer from './components/mosaic/NewsAndStoriesMosaic/NewsMosaicContainer';
-// import './carousel.scss';
+import './carousel.scss';
 import {
   changeHeaderBlue,
   changeHeaderBlack,

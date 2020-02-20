@@ -1,7 +1,7 @@
 import React from 'react';
 const ImageSlide = ({ Icon, subtitle, hide, id, level }) => (
   <div
-    id={'item level' + level}
+    className={'item level' + level}
     style={
       {
         // transition:
