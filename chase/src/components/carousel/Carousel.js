@@ -11,7 +11,7 @@ import Tachometer from '../../svgs/tachometer.svg';
 import PrivateClient from '../../svgs/private-clients.svg';
 import Invest from '../../svgs/invest.svg';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import '../../';
+import SlickDots from './SlickDots';
 export default class Carousel extends Component {
   constructor(props) {
     super(props);
@@ -37,14 +37,19 @@ export default class Carousel extends Component {
         { icon: MoneyCheck, subtitle: 'Schedule a meeting' }
       ],
       active: this.props.active,
-      direction: '',
-      transitionX: 0
+      // direction: '',
+      current: 3,
+      downX: 0,
+      // downY: 0,
+      upX: 0
+      // upY: 0
     };
   }
   generateItems = () => {
     var items = [];
     var level;
-    console.log(this.state.active);
+    let current;
+    // console.log(this.state.active);
     for (var i = this.state.active - 3; i < this.state.active + 4; i++) {
       var index = i;
       if (i < 0) {
@@ -53,6 +58,9 @@ export default class Carousel extends Component {
         index = i % this.state.items.length;
       }
       level = this.state.active - i;
+      if (level === 0 && index < this.state.items.length) {
+        current = index;
+      }
       items.push(
         <ImageSlide
           key={index}
@@ -64,47 +72,59 @@ export default class Carousel extends Component {
       );
     }
 
-    console.log(items);
-    return items;
+    return { items, current };
   };
 
   moveLeft = () => {
+    console.log('left');
     var newActive = this.state.active;
     newActive--;
-    this.setState({ transitionX: '-200' });
     this.setState({
       active: newActive < 0 ? this.state.items.length - 1 : newActive
-      // direction: 'left',
     });
-    this.setState({ transitionX: '0' });
   };
 
   moveRight = () => {
+    console.log('right');
     var newActive = this.state.active;
     this.setState({ transitionX: this.state.transitionX - 200 });
-    // this.setState({});
-    // this.setState({
-    //   active: (newActive + 1) % this.state.items.length,
-    //   direction: 'right',
-    //   transitionX: '0'
-    // });
+
     setTimeout(() => {
       this.setState({
         active: (newActive + 1) % this.state.items.length,
         direction: 'right'
-        // transitionX: '0'
       });
     }, 300);
   };
+  swipe = e => {
+    console.log(this.state);
+    this.setState({
+      downX: e.clientX
+    });
+  };
+  move = e => {
+    this.setState({
+      upX: e.clientX
+    });
+    const { downX, upX } = this.state;
+    console.log(downX, ' ', upX);
+    if (downX === upX) {
+      return;
+    } else if (downX > upX) {
+      this.moveRight();
+    } else if (downX < upX) {
+      this.moveLeft();
+    }
+  };
   render() {
-    console.log(this.state.transitionX);
+    const { items, current } = this.generateItems();
     return (
       <div>
         <div className='carousel-grid'>
-          <div class='carousel-grid-1'>
+          <div className='carousel-grid-1'>
             <p>Choose what's right for you</p>
           </div>
-          <div class='carousel-grid-2'>
+          <div className='carousel-grid-2'>
             <Arrow
               direction='left'
               clickFunction={this.moveLeft}
@@ -112,26 +132,23 @@ export default class Carousel extends Component {
             />
           </div>
 
-          <div class='carousel-grid-3'>
-            <div
-              id='slide-container'
-              style={
-                {
-                  // transform: `translate3d(${this.state.transitionX}px, 0px, 0px)`
-                }
-              }
-            >
-              {/* <ReactCSSTransitionGroup transitionName={this.state.direction}> */}
-              {this.generateItems()}
-              {/* </ReactCSSTransitionGroup> */}
-            </div>
+          <div
+            className='carousel-grid-3'
+            onMouseDown={this.swipe}
+            onTouchStart={this.swipe}
+            onMouseUp={this.move}
+          >
+            <div id='slide-container'>{items}</div>
           </div>
           <div class='carousel-grid-4'>
             <Arrow
               direction='right'
               clickFunction={this.moveRight}
               glyph={<i class='fa fa-angle-right'></i>}
-            />{' '}
+            />
+          </div>
+          <div className='carousel-grid-5'>
+            <SlickDots currentCard={current} />
           </div>
         </div>
       </div>

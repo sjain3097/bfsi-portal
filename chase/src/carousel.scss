@@ -2,12 +2,12 @@
   display: grid;
   grid-template-columns: 15% auto 15%;
   grid-gap: 10px;
-  /* background-color: black; */
+  // background-color: black;
   padding: 10px;
 }
 
 .carousel-grid > div {
-  background-color: rgba(255, 255, 255, 0.8);
+  // background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
   padding: 20px 0;
   color: #414042;
@@ -16,7 +16,9 @@
 .carousel-grid-1 {
   grid-column: 1/4;
 }
-
+.carousel-grid-5 {
+  grid-column: 1/4;
+}
 .carousel-grid-2,
 .carousel-grid-4 {
   font-size: 80px;
@@ -98,10 +100,10 @@ $level1-width: 150px;
 $level0-width: 150px;
 
 $level-3-left: 1020px;
-$level-2-left: 820px;
-$level-1-left: 620px;
-$level0-left: 420px;
-$level1-left: 220px;
+$level-2-left: 780px;
+$level-1-left: 590px;
+$level0-left: 410px;
+$level1-left: 230px;
 $level2-left: 50px;
 $level3-left: -150px;
 
@@ -221,4 +223,26 @@ $level3-left: -150px;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+.slick_dots--container {
+  display: flex;
+  justify-content: center;
+}
+.slick_dot--button {
+  width: 12px;
+  height: 12px;
+  margin-left: 10px;
+  padding: 1px 2px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 100%;
+  border: 1px solid #999999;
+}
+.active {
+  background-color: #0c4f98;
+  color: white;
+}
+.slick_dot--button:hover {
+  // background-color: gray;
+  color: white;
 }

@@ -49,10 +49,10 @@ class App extends Component {
         <Sidebar />
         <HeaderBackground />
         {/* <Carousel items={items} active={0} />, */}
-        <Carousel active={0} />
-        />
-        {/* <MosaicContainer />
-        <AdsContainer />
+        <Carousel active={2} />
+
+        <MosaicContainer />
+        {/*<AdsContainer />
         <NewsMosaicContainer />
         <FooterContainer /> */}
         {/* <Trial /> */}

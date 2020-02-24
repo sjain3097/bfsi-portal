@@ -1,15 +1,6 @@
 import React from 'react';
-const ImageSlide = ({ Icon, subtitle, hide, id, level }) => (
-  <div
-    className={'item level' + level}
-    style={
-      {
-        // transition:
-        //   'transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955),visibility 0s, opacity 0.5s linear',
-        // transform: `translate3d(-${transition}%, 0px, 0px)`
-      }
-    }
-  >
+const ImageSlide = ({ Icon, subtitle, hide, level }) => (
+  <div className={'item level' + level}>
     <div
       className={hide}
       className='carousel_item'
