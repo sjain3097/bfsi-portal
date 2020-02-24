@@ -1,91 +1,42 @@
-.mosaic_container {
-  display: flex;
-  /* width: 70%; */
-  margin: 4% 7% 0 7%;
-  text-align: center;
-}
-.mosaic_tile {
-  padding: 0;
-  margin-right: 0.7em;
+.mosaic-a_grid-container {
+  width: 80%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  /* background-color: #2196f3; */
+  padding: 10px;
+  margin: auto auto;
 }
 
+.mosaic-a_grid-container > div {
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  text-align: center;
+  /* padding: 20px 0; */
+  /* font-size: 30px; */
+}
 .mosaic_img {
   width: 100%;
   height: auto;
 }
-
-/* Mosaic-b */
-.mosaic-b {
-  margin-top: 10%;
-  background-color: #f3f0e9;
-}
-.mosaic-b__container {
-  margin: 0 auto;
-  max-width: 75em;
-}
-.mosaic-b_heading {
-  font-size: 50px;
-  font-weight: 300;
-}
-.mosaic__follow-us {
-  font-size: 24px;
-  text-align: right;
-  padding-top: 1.5%;
-}
-.mosaic__follow-us_item {
-  padding: 6px;
-  color: black;
-}
-.mosaic__follow-us_item:hover {
-  padding: 6px;
-  font-size: 26px;
-  color: #126bc5;
-}
-.mosaic-b_cta {
-  padding: 0 8px 32px 8px;
-}
-.mosaic-b_caret_link {
-  text-decoration: none;
-  font-size: 21px;
-  font-weight: 600;
-}
-/* Ipad media queries */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  .mosaic_container {
-    display: flex;
-    /* width: 70%; */
-    /* margin: 4% 7% 0 7%; */
-    margin-left: 1.4em;
-    text-align: center;
-  }
-  .mosaic_tile {
-    padding: 0;
-    width: 240px;
-    height: 175px;
-  }
-  .mosaic_img {
-    width: 100%;
-    height: auto;
+@media only screen and (max-width: 1200px) {
+  .mosaic-a_grid-container {
+    width: 99%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    /* background-color: #2196f3; */
+    padding: 10px;
+    margin: auto auto;
   }
 }
-
-/* iphone-x media queries  */
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) {
-  .mosaic_container {
-    display: block;
-    /* width: 70%; */
-    /* margin: 4% 7% 0 7%; */
-    margin-left: 1.4em;
-    text-align: center;
-  }
-  .mosaic_tile {
-    padding: 0;
-    /* width: 150%;
-    height: 150%; */
-  }
-  .mosaic_img {
-    width: 204%;
-    margin-top: 8%;
-    /* height: 130%; */
+@media only screen and (max-width: 760px) {
+  .mosaic-a_grid-container {
+    width: 99%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 10px;
+    /* background-color: #2196f3; */
+    padding: 10px;
+    margin: auto auto;
   }
 }
