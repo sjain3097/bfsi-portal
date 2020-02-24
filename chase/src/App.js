@@ -53,9 +53,10 @@ class App extends Component {
 
         <MosaicContainer />
         <AdsContainer />
-        {/*
+
         <NewsMosaicContainer />
-        <FooterContainer /> */}
+
+        <FooterContainer />
         {/* <Trial /> */}
       </div>
     );
