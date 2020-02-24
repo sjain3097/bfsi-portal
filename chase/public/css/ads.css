@@ -1,35 +1,71 @@
-.ad_tile {
+.ad-outer-container {
+  min-height: 11.25em;
+  margin-bottom: 5em;
+  padding: 2em;
+  border-top: 1px solid #ccc;
+}
+.ad-container {
   padding: 0 0.5em 0 0.5em;
-  margin-left: 7%;
-  margin-top: 7%;
-  border-top: 1px solid #d9d9d9;
-  width: 85%;
-}
-.ad_inner_tile {
-  margin-top: 3%;
-  margin-left: 2%;
 }
 
-.ad_title_container {
+.ad-title {
   display: inline-block;
-  width: 52%;
+  width: 58%;
 }
 
-.ad_title {
+.ad-title p {
+  width: 100%;
+  display: inline-block;
   font-weight: 300;
+  margin: 0 0 0.44em 0;
+  color: #414042;
   font-size: 3.125em;
-  line-height: 56px;
-  color: #414042;
+  line-height: 1.12em;
 }
-
-.ad_img_container {
-  /* float: left; */
+.ad-image {
+  display: inline-block;
+  width: 41%;
+  text-align: center;
   padding-right: 24px;
-  padding-left: 0;
+  padding-left: 24px;
 }
-
-.ad_content {
-  font-weight: 300;
-  font-size: 18px;
+.ad-image img {
+  max-width: 100%;
+}
+.ad-content {
+  display: inline-block;
+  width: 58%;
+}
+.ad-content p {
+  display: inline-block;
+  line-height: 1.375em;
+  margin: 0 0 0.625em 0;
+  font-weight: 400;
   color: #414042;
+  font-size: 1.125em;
+}
+@media only screen and (max-width: 1200px) {
+  .ad-title p {
+    font-size: 2.5em;
+    line-height: 1.15em;
+  }
+  .ad-outer-container {
+    min-height: 9.375em;
+    /* margin-bottom: 2em; */
+  }
+}
+@media only screen and (max-width: 1080px) {
+  .ad-outer-container {
+    min-height: 7.18em;
+    margin-bottom: 3em;
+  }
+}
+@media only screen and (max-width: 770px) {
+  .ad-content p {
+    font-size: 1em;
+  }
+  .ad-outer-container {
+    min-height: 7.18em;
+    margin-bottom: 2em;
+  }
 }

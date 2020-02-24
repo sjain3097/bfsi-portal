@@ -1,32 +1,21 @@
 import React from 'react';
 const AdTile = ({ adTitle, imgUrl, imgDirection, adContent }) => {
   return (
-    <div className='ad_tile'>
-      <div className='ad_inner_tile'>
-        <div className='ad_title_container '>
-          <p className='ad_title'>{adTitle}</p>
+    <div className='ad-outer-container'>
+      <div className='ad-container'>
+        <div className='ad-title'>
+          <p>{adTitle}</p>
         </div>
-        <div
-          class='ad_img_container'
-          style={{
-            float: imgDirection
-          }}
-        >
-          <img src={imgUrl} alt='' />
+        <div className='ad-image' style={{ float: imgDirection }}>
+          <img src={imgUrl} />
         </div>
-        <div class=''>
-          <div class=''>
-            <div class='ad_content'>
-              <p>{adContent}</p>
-            </div>
-            <div class=''>
-              <div>
-                <p class='btn btn-success btn-lg' style={{ color: 'white' }}>
-                  Learn more
-                </p>
-              </div>
-            </div>
-          </div>
+        <div className='ad-content'>
+          <p>{adContent}</p>
+        </div>
+        <div>
+          <p class='btn btn-success btn-lg' style={{ color: 'white' }}>
+            Learn more
+          </p>
         </div>
       </div>
     </div>

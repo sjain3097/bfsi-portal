@@ -52,7 +52,8 @@ class App extends Component {
         <Carousel active={2} />
 
         <MosaicContainer />
-        {/*<AdsContainer />
+        <AdsContainer />
+        {/*
         <NewsMosaicContainer />
         <FooterContainer /> */}
         {/* <Trial /> */}
